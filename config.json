@@ -1,0 +1,51 @@
+{
+  "_readme": "Single source of truth for where things live. Read this first, after bootstrap.",
+
+  "repo": {
+    "full_name": "s97cy4fy2c-ctrl/fpl-2627",
+    "raw_base": "https://raw.githubusercontent.com/s97cy4fy2c-ctrl/fpl-2627/main",
+    "bootstrap": "curl -sfL https://raw.githubusercontent.com/s97cy4fy2c-ctrl/fpl-2627/main/bootstrap.sh -o bs.sh && bash bs.sh"
+  },
+
+  "sheet": {
+    "id": "1yWU-4_xl9NbKOmrKuKnTvLNbEagAPuU2kdE6-PcdKjU",
+    "url": "https://docs.google.com/spreadsheets/d/1yWU-4_xl9NbKOmrKuKnTvLNbEagAPuU2kdE6-PcdKjU/edit",
+    "tabs": ["decision_log", "benchmarks", "process_errors", "watchlist"],
+    "access": "Composio googlesheets toolkit. Rate limit 60 reads/min, 60 writes/min - batch writes."
+  },
+
+  "_endpoints_note": "URLs are written with the full https:// scheme DELIBERATELY. A URL in a project file unlocks web_fetch only if schemed. Bare hostnames cost a redundant web_search every session - which is exactly what the old data.md did.",
+
+  "fpl_api": {
+    "bootstrap_static": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fixtures": "https://fantasy.premierleague.com/api/fixtures/",
+    "entry": "https://fantasy.premierleague.com/api/entry/50930/",
+    "entry_history": "https://fantasy.premierleague.com/api/entry/50930/history/",
+    "element_summary": "https://fantasy.premierleague.com/api/element-summary/{id}/",
+    "event_live": "https://fantasy.premierleague.com/api/event/{gw}/live/"
+  },
+
+  "mirror": {
+    "base": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2026-27",
+    "status_20260820": "FROZEN at 3 Aug. Zero changes vs baseline across all 567 rows. Now a FALLBACK only."
+  },
+
+  "access_routes": {
+    "_verified": "2026-08-20",
+    "composio_sandbox": "Reaches the FULL FPL API including entry/, element-summary/, event/live - all four that data.md called permanently blocked. This is the PRIMARY route. Free, unlimited.",
+    "container_bash": "raw.githubusercontent.com only. api.github.com is 60 req/hr PER SHARED IP - treat as unavailable. fantasy.premierleague.com NOT reachable.",
+    "web_fetch": "Only URLs already in context. Schemed URLs in project files qualify; bare hostnames do not.",
+    "reddit": "Composio reddit toolkit. Direct fetch is SITE_BLOCKED. Search + comment retrieval both work.",
+    "zenrows": "Connected. plan.livefpl.net returns 422 even with premium_proxy - unresolved as of 20 Aug. Retry post-deadline when EO data exists. Screenshots remain the fallback."
+  },
+
+  "europe_2627": {
+    "_source": "premierleague.com + UEFA, verified 2026-08-20",
+    "_warning": "This block exists because the value was previously typed from memory and 5 of 9 clubs were wrong. Never edit without a source and a date.",
+    "UCL": ["ARS", "MCI", "MUN", "AVL", "LIV"],
+    "UEL": ["BOU", "SUN", "CRY"],
+    "UECL": ["BHA"],
+    "no_europe": ["BRE", "CHE", "COV", "EVE", "FUL", "HUL", "IPS", "LEE", "NEW", "NFO", "TOT"],
+    "first_midweek_load": "UECL playoff 20 + 27 Aug (BHA only). CL/EL league phases from 15-17 Sep, i.e. GW5."
+  }
+}
