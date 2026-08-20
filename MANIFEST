@@ -1,7 +1,10 @@
 .gitignore
 README.md
 archive/2026-08-pre-redesign/README.md
+archive/2026-08-pre-redesign/analysis.md
 archive/2026-08-pre-redesign/behaviour.md
+archive/2026-08-pre-redesign/data.md
 archive/2026-08-pre-redesign/method.md
 bootstrap.sh
+config.json
 data/baseline_snapshot_20260803.csv
