@@ -65,7 +65,8 @@ are unchanged.
 
 - FPL's own difficulty ratings are crude. They ignore European commitments, midweek load
   and rotation risk. Treat as a starting point.
-- Teams rated 2 both home and away this season: **Coventry, Hull, Ipswich**.
+- Teams rated 2 both home and away this season: **Coventry, Hull, Ipswich**. Returns and
+  clean sheets concentrate against these.
 - **AFCON** is a January planning problem that catches people out annually. Flag affected
   players well before the window, not during it.
 - Blanks and doubles emerge from cup progression. Don't store a list — it'll be wrong by
