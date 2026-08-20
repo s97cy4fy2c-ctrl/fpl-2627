@@ -1,1 +1,7 @@
-.gitignore\nREADME.md\narchive/2026-08-pre-redesign/README.md\narchive/2026-08-pre-redesign/behaviour.md\narchive/2026-08-pre-redesign/method.md\nbootstrap.sh\ndata/baseline_snapshot_20260803.csv\n
+.gitignore
+README.md
+archive/2026-08-pre-redesign/README.md
+archive/2026-08-pre-redesign/behaviour.md
+archive/2026-08-pre-redesign/method.md
+bootstrap.sh
+data/baseline_snapshot_20260803.csv
