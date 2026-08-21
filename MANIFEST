@@ -8,3 +8,6 @@ archive/2026-08-pre-redesign/method.md
 bootstrap.sh
 config.json
 data/baseline_snapshot_20260803.csv
+docs/operating.md
+skills/gameweek-review/SKILL.md
+skills/gameweek-review/scripts/check_squad.py
