@@ -8,6 +8,61 @@ reconstructed after the fact.
 an action. If a condition is not met, the action does not fire — regardless of how
 the gameweek felt.
 
+**This plan is a default, not a cage.** It is written from data available on
+21 Aug 2026, before a single ball was kicked. That data will age badly. Strong new
+evidence should change it. The amendment rule below is how.
+
+---
+
+## Amending this plan
+
+**Change it when the world changed. Not when the result was bad.**
+
+That is the whole test. A plan that survives every outcome is dogma. A plan that
+folds after every red arrow is noise. The line between them is whether new
+*information* arrived, not whether the last gameweek hurt.
+
+**Grounds to amend — any one is enough:**
+
+| Evidence | Why it beats the plan |
+|---|---|
+| **Role change** | A player moved position, lost his starting place, or gained one. Doctrine's only override on sample size. Act immediately. |
+| **Set-piece change** | A new penalty or corner taker. A step-change in ceiling no per-90 trend surfaces for weeks. Outranks statistical trends. Act same week. |
+| **Transfer, in or out** | Prior numbers describe a different club. Applies through 31 Aug and again in January. |
+| **Availability** | Injury, suspension, an announced absence. Follow the injury protocol, not this plan. |
+| **~6 starts of 2026/27 underlying data** | Real numbers beat pre-season inference. From GW10 they replace it entirely. |
+| **DefCon delivered diverging from last season** | Delivered, never a rate. A defender's floor is his whole case; if it has gone, so has the pick. |
+| **Fixture or calendar change** | Postponements, cup progression, blanks and doubles. Re-pull from `/api/fixtures/`; do not trust the grid above after ~GW4. |
+| **A pressure point failing to bite** | The four below are inferences from FDR. If a wall does not materialise, say so and drop it. |
+
+**Not grounds to amend:**
+
+- One bad gameweek. One good one.
+- Form, hauls or blanks with no role change behind them. The market buys the hauler
+  and sells the blanker; that gap is where rank is made.
+- Ownership moving, on its own. Ownership is input to variance, not evidence of quality.
+- Community noise. The GW1 Reddit sweep was low-signal and one of its calls was wrong.
+- Regret about a pick already made. Correct call, bad outcome, is not a mistake.
+
+**How to amend — three steps, all required:**
+
+1. **Name the evidence** and tag it `[live]` / `[repo]` / `[mirror, date]`.
+2. **Name the trigger it overrides**, quoting the line it replaces.
+3. **Log it** in `decision_log` with category `plan-amendment`, and edit this file.
+   Append the change with a date. Do not silently rewrite — the superseded version
+   is the evidence.
+
+**Why step 3 matters.** Pre-commitment only works if breaking it is visible. An
+uncounted amendment is indistinguishable from having had no plan. At GW10, count
+the amendments and ask whether they earned. If most did, this plan was too rigid.
+If most did not, it was being fudged.
+
+**Nothing here overrides `doctrine.md`.** Where this plan and doctrine disagree,
+doctrine wins and the disagreement gets logged.
+
+**Hard sunset: GW10.** Re-derive the whole plan from actual 2026/27 data. Do not
+extend it by inertia.
+
 ---
 
 ## Fixture grid, GW1-GW10
@@ -79,7 +134,9 @@ slot compounds faster than the hit costs.
 ## Agile routes — pre-named exits
 
 Each row is a named contingency so the decision is not invented under time pressure.
-**None of these fire on form alone.**
+**None of these fire on form alone.** This list is not exhaustive — it covers what
+was foreseeable on 21 Aug. New evidence can add rows or retire them; see *Amending
+this plan*.
 
 | If this happens | Then do this | Funded by |
 |---|---|---|
