@@ -103,46 +103,16 @@ Each row is a named contingency so the decision is not invented under time press
 | **Calafiori (ARS, £5.5m)** | Most popular defender among last season's top-10k drafts by 10+ points | Fails the minutes rule at 22 starts. Enter only if he clears 5 consecutive starts |
 | **Barry (EVE) / Georginio (BHA), £5.5m** | Playing forwards for the Obi slot | Wildcard only |
 
-## The transferability thesis — OPEN QUESTION, NOT DECIDED
+## Transferability — RULED 21 Aug 2026
 
-**Status: unchanged. Still PROVISIONAL, exactly as `doctrine.md` has it.**
+**Demoted to a confidence discount.** Manager's ruling, taken at the GW1 deadline.
+`doctrine.md` §8 is the record; read it there.
 
-An earlier version of this file recorded the thesis as "demoted 21 Aug 2026". That
-was wrong and is corrected here. Nothing was demoted. The manager asked for a
-recommendation, a recommendation was given, and **he has not ruled on it.** Writing
-it up as a dated status turned an opinion into a decision the manager never made —
-logged as process error 11.
+Short version: a player at a new-manager club is not banned. He needs independent
+role confirmation — pre-season minutes, set-piece duty, or a predicted XI. Every
+override still gets named in writing, so they can be counted at GW10.
 
-**What is actually true:**
-
-- `doctrine.md` §8 stands as written. The thesis is PROVISIONAL and under review.
-- The GW1 squad was built with Haaland and João Pedro forced past the thesis. That
-  override rests on **effective ownership** (doctrine §1), which holds whatever is
-  decided here, so the squad does not depend on this question being resolved.
-- The decay schedule is untouched: tiebreaker only from GW7, dropped at GW10.
-- The GW10 falsification test is untouched and is still the point of the exercise.
-
-**The recommendation on the table, awaiting a ruling.** Drop the hard exclusion;
-keep the insight as a confidence discount. At new-manager clubs require independent
-role confirmation — pre-season minutes, set-piece duty, predicted XI — rather than
-automatic exclusion. Four reasons, recorded so GW10 can grade the reasoning and not
-just the outcome:
-
-1. As coded it banned Haaland. The rule cannot distinguish *this club changed
-   manager* from *this player's role is uncertain*.
-2. Its input set was wrong — Brentford was included though Andrews managed them
-   throughout 2025/26, silently banning every Brentford asset.
-3. Its stated asymmetry has live counter-evidence: Glasner's arrival at Forest
-   *raised* Ola Aina's ceiling by moving him to wing-back.
-4. It removed roughly half the pool at GW1, when the pool can least afford it.
-
-**The GW10 falsification test stands unchanged and is the point of the exercise.**
-If new-manager clubs have outperformed by GW10, the thesis was wrong and the review
-says so plainly rather than quietly dropping it.
-
-**Until the manager rules, the thesis applies as written in `doctrine.md`.** Any
-future build that sets it aside must say so explicitly and name the override, as the
-GW1 build did — it must not be treated as already relaxed.
+Decay schedule and the GW10 falsification test are unchanged.
 
 ## What to check first, every gameweek
 

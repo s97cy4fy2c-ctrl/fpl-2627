@@ -97,6 +97,14 @@ beats actual at GW10, the fix is fewer transfers, not better ones. Say so plainl
 - **No agreeing because you were pushed.** If challenged and still right, say so.
 - Tag every substantive claim: [live] / [repo] / [mirror, date] / [memory].
   Six of eight logged process errors were untagged claims from memory.
+- **Write short. One idea per sentence.** Prefer the shorter word. Cut qualifiers,
+  stacked clauses and throat-clearing. If a sentence needs a second read, rewrite it.
+  Long prose is not more rigorous, it is just harder to check — and a rule nobody
+  rereads is a rule nobody follows. This applies to chat and to committed files alike.
+- **Never record a provisional position as a decision.** A recommendation is not a
+  ruling. Dating it, or hedging it as "pending confirmation", does not help — a dated
+  status line reads as settled. Ask for the ruling, or file it as open. See process
+  error 11.
 
 **Known drift:** long conversations pull toward agreeableness. Correction phrases —
 "you're hedging", "that's punditry", "you're agreeing too easily" — mean re-read this
@@ -104,22 +112,34 @@ file and redo the answer without defending the original.
 
 ---
 
-## 8. PROVISIONAL — the 2026/27 transferability thesis
+## 8. Transferability — RULED 21 Aug 2026
 
-**Not settled. Under review. Do not treat as doctrine until the manager confirms.**
+**Ruling: demoted from hard exclusion to confidence discount.** Manager's call,
+taken at the GW1 deadline. Supersedes the PROVISIONAL block.
 
-Nine of twenty clubs began the season under a new manager, a Premier League record,
-and `team_join_date` shows a further set of mid-price players changed clubs. The claim
-is that a player's 2025/26 numbers only describe 2026/27 if he is at the same club
-under the same manager — and that of players owned above 9%, only a minority pass.
+**The rule now.** A player at a new-manager club is not banned. He needs
+**independent role confirmation** — pre-season minutes, set-piece duty, or a
+predicted XI. No confirmation, no pick. Confirmation, and his prior numbers count.
 
-The assumption underneath, stated so it can be falsified: *role changes at
-new-manager clubs degrade output more often than they improve it.* That is asymmetric
-and unproven.
+**Why it was demoted.** Four reasons, recorded so GW10 can grade the reasoning and
+not just the result:
 
-**Falsification test at GW10.** If the new-manager clubs have outperformed, this thesis
-was wrong and the GW10 review must say so plainly rather than quietly dropping it.
+1. As coded it banned Haaland. The rule could not tell *this club changed manager*
+   from *this player's role is uncertain*. Those are different claims.
+2. Its input set was wrong. Brentford was listed as a new-manager club though
+   Andrews managed them all of 2025/26. Every Brentford asset was silently banned.
+3. Its core assumption has counter-evidence. Glasner's arrival at Forest *raised*
+   Ola Aina's ceiling by moving him to wing-back. New managers create value too.
+4. It cut the pool roughly in half at GW1, when the pool can least afford it.
 
-**Decay schedule.** The thesis is an inference drawn in the absence of current-season
-data. From GW7 it is a tiebreaker only. At GW10 it is dropped entirely in favour of
-actual 2026/27 numbers.
+**The cost of this ruling, stated plainly.** A hard rule is testable. A discount is
+not. Case-by-case judgment gets fudged whenever fudging is convenient. That is the
+real argument for the binary, and it was not weak. The mitigation is that every
+override must be named in writing, so the fudges are countable at GW10.
+
+**Unchanged.** Decay schedule: tiebreaker only from GW7, dropped entirely at GW10.
+
+**Falsification test at GW10, unchanged and still the point.** If new-manager clubs
+have outperformed, the thesis was wrong. The GW10 review says so plainly rather than
+quietly dropping it. Judge the demotion too: count the overrides and ask whether the
+discount was applied honestly or used as an excuse.
