@@ -81,6 +81,6 @@ beats actual at GW10, the fix is fewer transfers, not better ones.
 | Item | Status |
 |---|---|
 | LiveFPL effective ownership | UNRESOLVED. ZenRows gets 422 even with premium proxy. Retry post-deadline when EO data exists. Screenshots remain the fallback |
-| `squad-build` skill | Not built. Where solver constraints stop being sentences |
-| Pipeline in repo | `fetch_fpl_v2.py` not committed — being superseded by skill scripts |
-| Transferability thesis | PROVISIONAL. Falsification test GW10 |
+| `squad-build` skill | BUILT and committed 21 Aug 2026 at `skills/squad-build/`. Was previously installed locally but absent from the repo, so MANIFEST never served it |
+| Pipeline in repo | CLOSED 21 Aug 2026. No `pipeline/` directory exists; README no longer claims one. Mechanical rules live in `skills/*/scripts/` |
+| Transferability thesis | PROVISIONAL. Falsification test GW10. 21 Aug 2026: recommended DEMOTION from hard exclusion to confidence discount — as coded it banned Haaland, and its input set was wrong. Awaiting manager confirmation |

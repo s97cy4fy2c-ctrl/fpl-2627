@@ -13,3 +13,5 @@ docs/ledger.md
 docs/operating.md
 skills/gameweek-review/SKILL.md
 skills/gameweek-review/scripts/check_squad.py
+skills/squad-build/SKILL.md
+skills/squad-build/scripts/build.py
