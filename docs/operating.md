@@ -96,6 +96,9 @@ markdown and hoping is what produced the eight-item error log.
 - `docs/operating.md` — this file.
 - `docs/doctrine.md` — judgment only. Short and arguable.
 - `docs/ledger.md` — squad, decisions, process errors. Append-only.
+- `docs/plan_gw1_gw10.md` — pre-committed chip triggers, named contingency exits
+  and the watchlist entry conditions. Written 21 Aug 2026 so later decisions are
+  checked against a fixed position rather than reconstructed after the fact.
 - `pipeline/` — the mechanical rules, as code.
 - `archive/2026-08-pre-redesign/` — the four original docs, verbatim. Not live.
 

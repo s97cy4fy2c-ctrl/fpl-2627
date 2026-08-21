@@ -8,12 +8,53 @@ this file holds what needs prose.
 
 ## Squad
 
-**NOT RECORDED.** The GW1 squad is not committed here. The manager has not settled
-the strategy, and recording a provisional squad as though it were decided is exactly
-the kind of false certainty this redesign exists to remove.
+**GW1 2026/27 — COMMITTED 21 Aug 2026, before the 18:30 BST deadline.**
+All values `[live]` from bootstrap-static, fetched 21 Aug 2026.
 
-When settled: squad table, whole-squad scorecard, and the frozen-XI benchmark that
-`benchmarks` tracks against.
+Formation 3-5-2. Cost £100.0m, ITB £0.0m. Captain Haaland, vice B.Fernandes.
+No chip played.
+
+| Slot | Player | Club | Pos | Price | Own | 25/26 pts | Starts | DefCon delivered |
+|---|---|---|---|---|---|---|---|---|
+| XI | Verbruggen | BHA | GKP | £4.5 | 21.6% | 130 | 38 | — |
+| XI | Gabriel | ARS | DEF | £8.0 | 29.7% | 209 | 30 | +22 |
+| XI | Shaw | MUN | DEF | £4.5 | 21.5% | 113 | 38 | +10 |
+| XI | Tarkowski | EVE | DEF | £6.0 | 8.8% | 170 | 37 | +44 |
+| XI | B.Fernandes (vc) | MUN | MID | £12.0 | 51.6% | 235 | 35 | +10 · PEN |
+| XI | Ndiaye | EVE | MID | £6.0 | 16.1% | 128 | 32 | +12 · PEN |
+| XI | E.Le Fée | SUN | MID | £6.0 | 10.7% | 147 | 33 | +16 |
+| XI | Tzolis | ARS | MID | £6.5 | 23.7% | 0 | 0 | — |
+| XI | Ampadu | LEE | MID | £5.5 | 1.5% | 134 | 35 | +38 |
+| XI | Haaland (C) | MCI | FWD | £15.5 | 69.4% | 239 | 34 | — · PEN |
+| XI | João Pedro | CHE | FWD | £7.5 | 64.1% | 177 | 31 | — |
+| B1 | Ballard | SUN | DEF | £5.0 | 5.5% | 116 | 24 | +30 |
+| B2 | F.Kadıoğlu | BHA | DEF | £4.5 | 3.0% | 118 | 34 | +4 |
+| B3 | Obi | MUN | FWD | £4.5 | 1.1% | 0 | 0 | — |
+| B4 | Dubravka | TOT | GKP | £4.0 | 20.2% | 96 | 35 | — |
+
+**Whole-squad scorecard.** Raw-ownership sum (XI) 319 · DefCon delivered (XI) +152 ·
+penalty takers 3 · correlated GK+DEF units in XI NONE · midweek European load 5 of
+9 clubs (MCI MUN ARS SUN BHA) · bench outfield starts 58 · transferable starters
+9/11 under the pre-21-Aug thesis.
+
+**Two deliberate rule overrides, both logged.**
+
+1. **Haaland and João Pedro forced past the transferability thesis.** Both are at
+   new-manager clubs, so the thesis as written excluded them. Overridden on
+   effective-ownership grounds: at 69.4% and 64.1% they are the two most-owned
+   players in the game and both are ceiling assets. Doctrine §1 says EO risk
+   scales with variance, so missing either concentrates rank risk far more than
+   the thesis saves. See the thesis review below.
+2. **Tzolis started despite failing the minutes rule (0 PL starts).** The rule
+   proxies minutes certainty through Premier League history; Tzolis is an
+   overseas signing with none, which is a proxy failure, not a rotation risk.
+   Direct evidence overrode it: he is in the predicted Arsenal 4-3-3 as left
+   winger `[live, 21 Aug]`. He takes no set pieces, so his ceiling is open play only.
+
+**Frozen XI benchmark.** The eleven above are the control series for the
+`benchmarks` tab. Never transferred, never re-picked. If frozen beats actual at
+GW10, the finding is *fewer transfers, not better ones*, and the GW10 review must
+say so plainly.
 
 ---
 
