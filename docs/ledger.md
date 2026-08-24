@@ -60,36 +60,50 @@ say so plainly.
 
 ## Process errors
 
-Full structured record: `process_errors` tab. Eight logged to 21 Aug 2026.
+Full structured record: `process_errors` tab. **Ten entries logged to 21 Aug 2026.**
+
+**Corrected 24 Aug 2026.** This section previously read "Eight logged" and carried
+aggregate tables built on that count. Both were wrong. Recounted directly from the
+`process_errors` tab, not from recall.
+
+**Known defect in the tab: `n` runs 1-7, 9, 10, 11. There is no row 8.** Ten rows
+exist; the highest index is 11. The gap is left in place deliberately - renumbering
+an append-only log destroys the references that point at it. Do not "fix" it by
+resequencing. Either row 8 was never written or it was deleted, and which of those
+is true is not currently known.
 
 The aggregate, which prose could never have produced:
 
 | Family | Count |
 |---|---|
 | fast-field (club assignment, availability, transfers, calendar) | 5 |
+| metric-misuse | 2 |
+| process | 2 |
 | role-change | 1 |
-| metric-misuse | 1 |
-| process | 1 |
 
 | Rule was already written in | Count |
 |---|---|
 | `analysis.md` (archived) | 3 |
 | `data.md` (archived) | 3 |
-| nowhere — a genuine gap | 1 |
+| `operating.md` / `doctrine.md` / `README.md` (live set) | 3 |
+| nowhere - a genuine gap | 1 |
 
 | Caught by | Count |
 |---|---|
 | manager | 6 |
+| self | 3 |
 | Reddit sweep | 1 |
-| self | 1 |
 
-**Six of eight violated a rule that already existed.** The files were never the
-problem. That finding drove the entire redesign: mechanical rules moved into
-`check_squad.py` where they exit non-zero, and the weekly loop moved into a skill
-where each step has an output that must be stated.
+**Nine of ten violated a rule that already existed.** Only entry 3 had no rule behind
+it. The files were never the problem. That finding drove the entire redesign:
+mechanical rules moved into `check_squad.py` where they exit non-zero, and the weekly
+loop moved into a skill where each step has an output that must be stated.
 
-**The uncomfortable column is "caught by".** Manager 6, self 1. If that ratio has not
-shifted by GW10, the redesign did not work and the GW10 review must say so.
+**The uncomfortable column is "caught by".** Manager 6, self 3, Reddit 1. The
+self-caught share is better than the previously recorded "self 1" - entries 9 and 10
+were both self-caught on 21 Aug and were never reflected in this file. If that ratio
+has not shifted further by GW10, the redesign did not work and the GW10 review must
+say so.
 
 ---
 
@@ -124,4 +138,4 @@ beats actual at GW10, the fix is fewer transfers, not better ones.
 | LiveFPL effective ownership | UNRESOLVED. ZenRows gets 422 even with premium proxy. Retry post-deadline when EO data exists. Screenshots remain the fallback |
 | `squad-build` skill | BUILT and committed 21 Aug 2026 at `skills/squad-build/`. Was previously installed locally but absent from the repo, so MANIFEST never served it |
 | Pipeline in repo | CLOSED 21 Aug 2026. No `pipeline/` directory exists; README no longer claims one. Mechanical rules live in `skills/*/scripts/` |
-| Transferability thesis | PROVISIONAL. Falsification test GW10. 21 Aug 2026: recommended DEMOTION from hard exclusion to confidence discount — as coded it banned Haaland, and its input set was wrong. Awaiting manager confirmation |
+| Transferability thesis | **CLOSED as an open item 21 Aug 2026 — RULED, not pending.** Demoted from hard exclusion to a confidence discount by manager ruling at the GW1 deadline. `doctrine.md` §8 is the record. This row previously read "Awaiting manager confirmation", which contradicted doctrine; corrected 24 Aug 2026. The GW10 falsification test remains open and is tracked in `plan_gw1_gw10.md`, not here |
