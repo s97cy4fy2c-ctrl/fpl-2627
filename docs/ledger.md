@@ -146,3 +146,50 @@ beats actual at GW10, the fix is fewer transfers, not better ones.
 | Pipeline in repo | CLOSED 21 Aug 2026. No `pipeline/` directory exists; README no longer claims one. Mechanical rules live in `skills/*/scripts/` |
 | Transferability thesis | **CLOSED as an open item 21 Aug 2026 — RULED, not pending.** Demoted from hard exclusion to a confidence discount by manager ruling at the GW1 deadline. `doctrine.md` §8 is the record. This row previously read "Awaiting manager confirmation", which contradicted doctrine; corrected 24 Aug 2026. The GW10 falsification test remains open and is tracked in `plan_gw1_gw10.md`, not here |
 | Look-vs-act rule | RULED 25 Aug 2026, committed to `doctrine.md` §2. Form is a trigger to look, never a reason to act; act only on a named cause — role, set-piece, or volume over ~6 starts. Pre-GW6 only role and set-piece are actionable. Falsifiable at GW10 alongside the transferability thesis; grade whether the cause-gate was applied honestly. |
+
+
+---
+
+## Gameweek rulings
+
+Non-transfer weekly decisions — Hold, captaincy, XI shape, bench order. The
+`decision_log` tab is transfer rows only; recording a Hold there would poison the
+GW10 category review, so these live here as dated prose. Append-only.
+
+### GW2 — RULED 25 Aug 2026. Deadline Thu 28 Aug, 18:30 BST.
+
+**Hold. 0 transfers. Bank the FT.** Captain Haaland, vice B.Fernandes.
+
+XI unchanged, 3-5-2 [live 25 Aug]: Verbruggen; Gabriel, Shaw, Tarkowski; B.Fernandes,
+Ndiaye, Tzolis, E.Le Fee, Ampadu; Haaland (C), Joao Pedro.
+Bench order: 1 Ballard, 2 Kadioglu, 3 Obi. Reserve GK Dubravka.
+
+**Why hold.** No role, set-piece, or availability change in the XI [live]. One GW is
+not a sample; before ~6 starts only role and set-piece override [repo, doctrine 2].
+A banked FT is worth ~one future move; no GW2 upgrade beats it. The wildcard window
+(GW6-9) is the free fix; hits are almost never right before GW7 [repo].
+
+**XI assessed as a shape, not inherited.** Two forwards are the only startable
+attackers (Obi 0 mins), so any legal shape is X-Y-2 [live]. 3-5-2 ranked above 4-4-2:
+starting Ballard for Ampadu is a floor wash — Ballard's GW1 DefCon (9) missed the DEF
+threshold (10) while Ampadu's (13) cleared MID — and breaks a balanced shape for
+nothing. No correlated GK+DEF unit in the XI. Everton appears twice (Tarkowski clean
+sheet, Ndiaye attack) through different point sources, so it is not one bet.
+
+**Rejected transfer.** Reactive Shaw->De Cuyper (De Cuyper 17 pts GW1): form off one
+game; would create a BHA GK+DEF correlation with Verbruggen; De Cuyper GW2 is CHE(A)4
+vs Shaw IPS(H)2. Loses on every moved axis.
+
+**Captaincy in EO terms.** Haaland ~68.7% owned, most-captained in GW1 [live].
+Captaining the ~69% ceiling asset is the defensive play; the risk is in not holding
+the armband there [repo, doctrine 1]. CRY(A) fdr3 — not a TC spot. TC target stays
+GW3 COV(H)2 if Haaland starts and completes GW2.
+
+**Logged, not acted.** MUN 0-2 at Hull [live] dents the "United easy opening pair"
+FDR inference behind three United picks. One GW, no role change -> not grounds [repo].
+Re-tested at GW10.
+
+**Forward intent: unchanged.** The Tzolis->E.Anderson exit did not fire — Tzolis
+started and returned; its window closes after GW2. Obi stays a wildcard fix. Kadioglu
+doubtful (75%, UECL 2nd leg 27 Aug) is bench cover; injury protocol = no action, and
+if he is ruled out nothing changes (already behind Ballard, Obi last).
