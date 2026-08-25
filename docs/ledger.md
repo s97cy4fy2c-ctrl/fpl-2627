@@ -105,6 +105,10 @@ were both self-caught on 21 Aug and were never reflected in this file. If that r
 has not shifted further by GW10, the redesign did not work and the GW10 review must
 say so.
 
+**Shipped 25 Aug 2026.** The redesign this section describes is now committed. `gameweek-review` became a squad-as-unit weekly loop with a proactive unowned-pool and trend scan and a forward-plan consult/update step (commit `b61177c`); `doctrine.md`, `operating.md`, `plan_gw1_gw10.md` and `squad-build` were condensed with rationale demoted to Why blocks (commit `402cd44`). doctrine §2 also gained the look-vs-act rule — see Open items. All five files were server-verified byte-exact against the reviewed checksums. Whether it worked is the GW10 caught-by ratio, not this note.
+
+**Updated 25 Aug 2026.** Entry 12 logged to the tab — a process error from this session, self-caught: two structural decisions were mis-filed into the `decision_log` tab and moved to this file. Count is now eleven; the aggregates above are as of 21 Aug and exclude it. Deltas: family process 2→3, caught-by self 3→4, rule-lived-in live-set (now incl. `ledger.md`) 3→4. Self-caught share moves 3/10 → 4/11.
+
 ---
 
 ## Decision log
@@ -117,6 +121,8 @@ alternative, then points for both over the following four gameweeks, delta, verd
 Categories are the four from the post-mortem doctrine — fixture-chasing,
 form-chasing, price-chasing, gut-differential — plus injury-forced and role-change,
 which the season will produce whether planned for or not.
+
+**Corrected 25 Aug 2026.** The `decision_log` tab is transfer decisions only — its point-delta columns and category vocabulary assume an in/out pair — so structural, doctrine and process decisions are recorded in this file's prose, not the tab. Two such rows were briefly appended on 25 Aug and removed the same day (`process_errors` n=12). 'Empty until GW1 resolves' above refers to *transfer* rows; the tab also carries the GW1 `initial-build` seed as the squad baseline.
 
 ---
 
@@ -139,3 +145,4 @@ beats actual at GW10, the fix is fewer transfers, not better ones.
 | `squad-build` skill | BUILT and committed 21 Aug 2026 at `skills/squad-build/`. Was previously installed locally but absent from the repo, so MANIFEST never served it |
 | Pipeline in repo | CLOSED 21 Aug 2026. No `pipeline/` directory exists; README no longer claims one. Mechanical rules live in `skills/*/scripts/` |
 | Transferability thesis | **CLOSED as an open item 21 Aug 2026 — RULED, not pending.** Demoted from hard exclusion to a confidence discount by manager ruling at the GW1 deadline. `doctrine.md` §8 is the record. This row previously read "Awaiting manager confirmation", which contradicted doctrine; corrected 24 Aug 2026. The GW10 falsification test remains open and is tracked in `plan_gw1_gw10.md`, not here |
+| Look-vs-act rule | RULED 25 Aug 2026, committed to `doctrine.md` §2. Form is a trigger to look, never a reason to act; act only on a named cause — role, set-piece, or volume over ~6 starts. Pre-GW6 only role and set-piece are actionable. Falsifiable at GW10 alongside the transferability thesis; grade whether the cause-gate was applied honestly. |
