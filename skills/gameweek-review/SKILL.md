@@ -30,7 +30,7 @@ hard-rule breach.
 | # | Step | Output that must be stated |
 |---|---|---|
 | 1 | Refresh roster + fixtures; staleness check | frozen / lagged / current |
-| 2 | Squad health: availability + cold-trend across all 15 | every flag + every cold name, or "none" |
+| 2 | Squad health: availability + cold-trend + current-club check (deadline day) across all 15 | every flag + every cold name + any club change, or "none" |
 | 3 | Set-piece diff vs baseline | changes, or "no change" |
 | 4 | Fixtures next 3 and 6, plus European load | which clubs swing |
 | 5 | Pool scan: hot-trend + solver upgrade candidates, unowned | named candidates, or "none clears the bar" |
@@ -127,6 +127,15 @@ units · midweek European load · bench outfield starts · ownership sum · cost
 | Out 2-4, starter | Transfer only on a spare FT. No hit before GW7 |
 | Out 5+, any starter | Transfer now, hit or not |
 | 2+ starters out, WC in hand | Bring the Wildcard forward, don't take hits |
+
+## Deadline-day club check
+
+The transfer window — through 31 Aug, again in January — can move a squad member
+between clubs *after* the session-open fetch. On any deadline that falls in an open
+window, re-fetch and confirm the current club of all 15 **at write time**, not just at
+pull time. A changed club is a hard cause to act (doctrine §2) and its prior numbers
+describe a club it left. Added 3 Sep 2026 after process error n=13 (Ndiaye moved
+Everton→Man City on deadline day; the review, built on the session-open pull, missed it).
 
 ## Context discipline
 

@@ -109,6 +109,8 @@ say so.
 
 **Updated 25 Aug 2026.** Entry 12 logged to the tab — a process error from this session, self-caught: two structural decisions were mis-filed into the `decision_log` tab and moved to this file. Count is now eleven; the aggregates above are as of 21 Aug and exclude it. Deltas: family process 2→3, caught-by self 3→4, rule-lived-in live-set (now incl. `ledger.md`) 3→4. Self-caught share moves 3/10 → 4/11.
 
+**Updated 3 Sep 2026.** Entry n=13 logged — twelve rows now, highest index 13. A GW3 pre-deadline staleness miss: the review ran on the session-open bootstrap fetch and missed Ndiaye's deadline-day Everton→Man City transfer; caught by manager. Deltas from the 21 Aug aggregate: family fast-field 5→6, caught-by manager 6→7. Self-caught share moves 4/11 → 4/12 — the wrong direction; if the ratio has not improved by GW10 the redesign did not work and the GW10 review says so. Fix: gameweek-review step 2 hardened to verify current club for all 15 on deadline day (committed 3 Sep 2026).
+
 ---
 
 ## Decision log
@@ -193,3 +195,20 @@ Re-tested at GW10.
 started and returned; its window closes after GW2. Obi stays a wildcard fix. Kadioglu
 doubtful (75%, UECL 2nd leg 27 Aug) is bench cover; injury protocol = no action, and
 if he is ruled out nothing changes (already behind Ballard, Obi last).
+
+
+### GW3 — RULED 3 Sep 2026. Deadline Fri 4 Sep, 18:30 BST.
+
+**1 transfer: Ndiaye OUT -> Groß IN. Bank 2nd FT (1 used, 1 banked). Chip: TRIPLE CAPTAIN on Haaland.** Captain Haaland (TC x3), vice B.Fernandes. XI unchanged 3-5-2. Bench: 1 Ballard, 2 Kadıoğlu, 3 Obi; reserve GK Dubravka.
+
+**Why the transfer.** Ndiaye transferred Everton->Man City on the deadline-day window (closed 1 Sep) [live]. A transfer is a hard amendment ground — act immediately [repo, doctrine 2]. His Everton record now describes a club he left; role at City unverified (rotation + UCL midweek load from GW5); and he ceased to be a penalty taker (Everton pen1 -> City pen None), which alone drops the squad from 3 pen takers to 2.
+
+**Why Groß over Sangaré.** The replacement brief is Ndiaye's profile — attacking mid on penalties — not a DefCon floor. Ampadu already carries the mid floor (+38 delivered), so a second pure-floor mid (Sangaré, DefCon delivered 2/2) is redundant. Groß is Brighton's penalty taker, order 1 [live] — a set-piece role, which outranks statistical trends and needs no six-start sample — restoring the third pen taker (Bruno, Haaland, Groß). Bought the durable pen role, NOT the 13-point two-game haul (form spike, ignored [repo, doctrine 2]). Cost: Brighton 2->3 in the 15 (2 in XI — Verbruggen off clean sheets, Groß off attack, different point sources, not one bet; Verbruggen+Groß is GK+MID, not the banned GK+DEF pair). Brighton UECL playoff done 20/27 Aug; league phase ~Oct, inside/after the WC window; Groß nailed 90/90 [live]. Ndiaye £6.0 -> Groß £5.5, +£0.5 ITB.
+
+**Rejected.** Sangaré (BRE, DefCon delivered 2/2, zero correlation) — redundant floor vs Ampadu, runs only 2 pen takers. Stach (LEE) — 2nd Leeds. Hold-and-bench Ndiaye — carries an unverified City starter in the XI and reintroduces the Ballard-for-mid floor wash.
+
+**Triple Captain — FIRED.** Haaland: home fixture rated 2 (COV), started and completed the previous two (90'/90'), fit, no UCL load before GW5 [live, repo]. Earliest clean TC spot per the plan; GW5+ carries midweek load. Rejected holding the chip for a speculative later double — none is visible in the live grid [live].
+
+**Holds.** Tzolis — two early subs (75', 45') but still starting; no confirmed role change, not actionable pre-GW6. Hold with a GW3 trip-wire: a third early sub or a benching = act; the wildcard (GW6-9) resolves it. Le Fée — output poor (5 pts, form 2.5) but nailed (79'/89'), set-piece role intact (primary corners), xGI rising 0.03->0.54; form is a trigger to look, not a cause to act [repo, doctrine 2]. His trigger is the GW4-5 Sunderland wall (ARS H4, MCI A5); pre-named exit there on the banked FT. Hold GW3 (BRE away, fdr3), move GW4.
+
+**Process error n=13.** This GW3 review was built on the session-open bootstrap fetch and missed Ndiaye's deadline-day move; caught by manager. Caught-by ratio -> manager 7 / self 4. Fix committed this session: gameweek-review step 2 now verifies current club for all 15 on deadline day. See process_errors n=13.
