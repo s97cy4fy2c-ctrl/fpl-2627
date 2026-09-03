@@ -111,6 +111,8 @@ say so.
 
 **Updated 3 Sep 2026.** Entry n=13 logged — twelve rows now, highest index 13. A GW3 pre-deadline staleness miss: the review ran on the session-open bootstrap fetch and missed Ndiaye's deadline-day Everton→Man City transfer; caught by manager. Deltas from the 21 Aug aggregate: family fast-field 5→6, caught-by manager 6→7. Self-caught share moves 4/11 → 4/12 — the wrong direction; if the ratio has not improved by GW10 the redesign did not work and the GW10 review says so. Fix: gameweek-review step 2 hardened to verify current club for all 15 on deadline day (committed 3 Sep 2026).
 
+**Updated 3 Sep 2026 (2).** Entry n=14 logged — thirteen rows now, highest index 14. Ran the GW3 review from the stale mounted skill snapshot (`/mnt/skills`, 9-step) instead of the repo version (10-step, commit b61177c), and so skipped the cold-trend surface (step 2), the proactive pool scan (step 5), and the forward-plan update (step 10). Consequence: Shaw's cold trend went unflagged and Le Fée's was surfaced by the manager, not proactively; the forward plan was left stale on four Ndiaye lines. No decision changed — the skipped steps were re-run and none cleared the bar. Caught by manager. Deltas: family process 3→4; caught-by manager 7→8; self-caught share 4/12 → 4/13 — again the wrong direction. Fix: operating.md now requires reading loop skills from the repo, not the mount; plan_gw1_gw10.md amended by dated append.
+
 ---
 
 ## Decision log
@@ -212,3 +214,7 @@ if he is ruled out nothing changes (already behind Ballard, Obi last).
 **Holds.** Tzolis — two early subs (75', 45') but still starting; no confirmed role change, not actionable pre-GW6. Hold with a GW3 trip-wire: a third early sub or a benching = act; the wildcard (GW6-9) resolves it. Le Fée — output poor (5 pts, form 2.5) but nailed (79'/89'), set-piece role intact (primary corners), xGI rising 0.03->0.54; form is a trigger to look, not a cause to act [repo, doctrine 2]. His trigger is the GW4-5 Sunderland wall (ARS H4, MCI A5); pre-named exit there on the banked FT. Hold GW3 (BRE away, fdr3), move GW4.
 
 **Process error n=13.** This GW3 review was built on the session-open bootstrap fetch and missed Ndiaye's deadline-day move; caught by manager. Caught-by ratio -> manager 7 / self 4. Fix committed this session: gameweek-review step 2 now verifies current club for all 15 on deadline day. See process_errors n=13.
+
+### Plan amendment — 3 Sep 2026
+
+Recorded in prose, not the `decision_log` tab (transfer rows only, per n=12). `plan_gw1_gw10.md` amended by dated append: Ndiaye's EVE→MCI transfer supersedes four 21-Aug lines (European load, GW7-8 Everton pressure point, Everton-wall route, set-piece takers). Set-piece takers now B.Fernandes, Haaland, Groß; Everton exposure is Tarkowski only; Groß (BHA) carries UECL load ~Oct. Originals preserved. The plan's "How" step still says to log amendments in `decision_log`, which conflicts with the n=12 discipline — flagged in the plan append for GW10 reconciliation.

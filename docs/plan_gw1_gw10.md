@@ -169,3 +169,19 @@ the three that matter most:
 2. **Set-piece diff** — three penalty takers is the ceiling; losing one is a
    step-change no per-90 surfaces for weeks.
 3. **European load from GW5** — five of nine clubs affected, and FDR is blind to it.
+
+---
+
+## Amendments
+
+Dated appends that supersede lines above; the originals stay in place as the pre-committed record (see *Amending this plan*).
+
+### 3 Sep 2026 — Ndiaye transferred Everton → Man City (GW3)
+
+Ndiaye moved EVE→MCI on the deadline-day window (closed 1 Sep) `[live]`, and was transferred out for Groß (BHA £5.5) at the GW3 deadline. `ledger.md` carries the GW3 ruling; the `decision_log` tab carries the transfer row. This supersedes four lines written 21 Aug, when Ndiaye was an Everton asset:
+
+- **Midweek European load** — Ndiaye is no longer rotation-risk-free: at Man City he carries UCL load from GW5. His replacement **Groß (BHA)** carries **UECL** load once the league phase begins ~Oct — inside the wildcard window, so no action, but not risk-free either.
+- **Pressure point 2 (GW7-8 Everton)** and the **Everton-wall agile route** — now **Tarkowski only**; Everton exposure in the 15 is a single asset.
+- **Set-piece takers** — now **B.Fernandes, Haaland, Groß** (Groß is Brighton's penalty taker, order 1 `[live]`), keeping the squad at three pen takers after Ndiaye's pen duty left with him.
+
+**Logging note.** The *Amending this plan* steps say to log a plan-amendment in `decision_log`. That conflicts with the tab discipline ruled after process error n=12 — `decision_log` is transfer rows only; structural and plan decisions go to `ledger.md` prose. This amendment is in `ledger.md`, not the tab. Reconcile the conflicting instruction at the GW10 sunset.

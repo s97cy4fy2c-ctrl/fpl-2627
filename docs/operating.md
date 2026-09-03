@@ -93,7 +93,7 @@ If a rule can be checked, something that fails must check it.
   GW10 it is the forward plan the weekly loop consults and amends; at the GW10 sunset
   it is re-derived and becomes the rolling ~3-4 GW plan.
 - `skills/` — the mechanical rules, as code, plus the gameweek-review and squad-build
-  loops. Load on trigger.
+  loops. Load on trigger. **Read the skill body from the repo — the mounted `/mnt/skills` copy is an unsynced snapshot and lagged the 10-step redesign by a full loop version (process error n=14); the repo is authoritative.**
 - `archive/2026-08-pre-redesign/` — the four original docs, verbatim. Not live.
 
 The spreadsheet holds `decision_log`, `benchmarks`, `process_errors`, `watchlist`.
