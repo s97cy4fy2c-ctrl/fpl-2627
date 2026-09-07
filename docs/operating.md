@@ -54,6 +54,10 @@ Every substantive claim carries its source:
 - **[live]** — fetched this session
 - **[repo]** — a committed file, with its verification date
 - **[mirror, DD Mon]** — the GitHub dump, with its date
+- **[community, DD Mon]** — forums, blogs, expert sites. A HYPOTHESIS, never evidence.
+  May not enter a scorecard, a decision-log line or a plan amendment until confirmed
+  independently against live data, at which point it becomes [live] and the community
+  claim is discarded. Distil it through `resolve_names.py`, never raw through an LLM.
 - **[memory]** — not fetched. Say so, treat as hypothesis.
 
 If you can't tag it, don't assert it. Most logged process errors were untagged claims
