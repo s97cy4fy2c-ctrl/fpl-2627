@@ -100,7 +100,10 @@ Separate **process error** from **variance** every time.
 - Bad process, good outcome → still a mistake.
 - Only process errors change future behaviour.
 
-At GW10 and GW19, review the decision log **by category** — fixture-, form-,
+At GW10 and GW19, review the **`rejections` tab by reason_type** alongside the decision
+log. Which kind of reason was worst - constraint claims, fixture reads, hard rules, EO
+judgments? Options we threw away are as gradeable as ones we took, and until 7 Sep 2026
+nothing counted them. Then review the decision log **by category** — fixture-, form-,
 price-chasing, gut differentials — and report which earned. That is the improvable
 thing; individual results are not.
 
