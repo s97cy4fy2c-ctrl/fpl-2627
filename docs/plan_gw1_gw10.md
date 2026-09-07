@@ -11,6 +11,54 @@ Strong new evidence should change it — via the amendment rule below.
 
 ---
 
+## STANDING PLAN - as at 7 Sep 2026, after GW3
+
+**Read this first.** Everything below it is the pre-committed 21 Aug record plus dated
+amendments. The originals stay in place because the GW10 falsification test needs
+them; this block is what is actually live. Where the two conflict, this block wins and
+the superseded line is quoted in the 7 Sep amendment at the foot of the file.
+
+**Where we are** `[live, 7 Sep]`. 204 pts, overall rank 1,885,177. Objective top 100k.
+Frozen-XI control 197, so the entire 7-point lead over doing nothing is the GW3 Triple
+Captain; the Gross-for-Ndiaye transfer is -2 to date. Two FTs, 0.5 ITB, squad 99.3.
+
+**Chips.** Triple Captain SPENT (GW3). Remaining in set one: Wildcard, Free Hit, Bench
+Boost, all expiring at the **GW19 deadline, 2 Jan 2027**. Verified `[live, 7 Sep]`:
+every gameweek GW4-GW19 is a full ten-fixture round and the fixture list has zero
+unassigned fixtures, so **no blank exists before that expiry**. Chips are now governed
+by doctrine s4 as a stopping rule, not by trigger conditions.
+
+**The wildcard's brief has changed.** It was "six rounds of real data, then tidy up".
+The real brief is now three named structural faults `[live, 7 Sep]`:
+
+1. **DefCon has not arrived.** The squad was built on +152 delivered in 25/26. Across
+   GW1-3 the XI has delivered **8 points**. Ampadu, the 1.1%-owned differential bought
+   purely on DefCon, sits on 13/10/11 actions against a threshold of 12 with 0.00 xG.
+2. **Two dead squad slots.** Obi and Dubravka, 0 minutes each across three gameweeks.
+   This is also why Bench Boost is currently unplayable.
+3. **Collision load.** Nine clubs across fifteen players produces a collision in every
+   gameweek GW4-GW10, including a class A at GW5 (Verbruggen/Gabriel) and a class A at
+   GW8 (Gabriel/Tarkowski - our two largest DefCon assets, mutually exclusive).
+
+**Live decision points, in order.**
+
+| When | Decision | State |
+|---|---|---|
+| GW4, Sat 12 Sep 13:30 BST | Hold vs Free Hit | **OPEN.** Lean Hold ~55/45. Tie-breaker pre-stated: if Thu/Fri team news puts 2+ of the XI in doubt, Free Hit becomes the pick |
+| GW5 vs GW6 | Free Hit GW5 then Wildcard GW6, or Wildcard GW6 and Free Hit later | **50/50.** Settle with GW4 results in hand. GW5 is the more compromised week (XI FDR 3.18, class-A collision, European load begins) |
+| ~GW15 | Free Hit backstop | If unplayed, play it on the best remaining week. Expiry beats optimisation |
+| GW6-9 | Wildcard | Brief is the three faults above, not a tidy-up. Must design out the GW8 class A and build a playable bench for the Bench Boost |
+| GW10 | Hard sunset | Unchanged. Re-derive from real data |
+
+**European load starts GW5**, not GW1. CL/EL league phases 15-17 Sep. Six starters
+affected: Gabriel, Tzolis (ARS), Shaw, B.Fernandes (MUN), Haaland (MCI), E.Le Fee
+(SUN). Verbruggen and Gross (BHA, UECL) not until ~Oct. FDR is blind to all of it.
+
+**Watchlist lives in the spreadsheet tab, not here.** Refreshed 7 Sep; the 21 Aug table
+below is superseded in full.
+
+---
+
 ## Amending this plan
 
 **Change it when the world changed. Not when the result was bad.** That is the whole
@@ -185,3 +233,86 @@ Ndiaye moved EVE→MCI on the deadline-day window (closed 1 Sep) `[live]`, and w
 - **Set-piece takers** — now **B.Fernandes, Haaland, Groß** (Groß is Brighton's penalty taker, order 1 `[live]`), keeping the squad at three pen takers after Ndiaye's pen duty left with him.
 
 **Logging note.** The *Amending this plan* steps say to log a plan-amendment in `decision_log`. That conflicts with the tab discipline ruled after process error n=12 — `decision_log` is transfer rows only; structural and plan decisions go to `ledger.md` prose. This amendment is in `ledger.md`, not the tab. Reconcile the conflicting instruction at the GW10 sunset.
+
+
+### 7 Sep 2026 - post-GW3 amendment
+
+Grounds: **~6 starts of 2026/27 data** is not yet reached, but three other listed
+grounds are - *fixture / calendar change*, *a pressure point failing to bite*, and
+*DefCon delivered diverging*. Plus two doctrine rulings made the same day. Evidence
+is `[live, 7 Sep]` from the FPL API unless tagged otherwise.
+
+**1. Chip triggers - superseded.** Replaces, in the chip table:
+
+> **Free Hit** | A **blank gameweek**. Nothing else. | The "5+ unavailable" condition
+> is decorative.
+
+Every gameweek GW4-GW19 is a full ten-fixture round; the season fixture list has zero
+unassigned fixtures. No blank exists before the 2 Jan expiry, so that trigger
+guaranteed the chip expired unused. Fixture-targeting is now the primary use, upside
+led; a blank stays valid but is no longer the only trigger; backstop ~GW15. Full
+reasoning in doctrine s4. Also superseded: **Triple Captain** row - SPENT at GW3 on
+Haaland v Coventry, returned 27 (9 x3), i.e. +9 over a normal captain against a field
+where 1.79m managers played the same chip the same week. **Bench Boost** row - the
+note "currently unreachable" is upgraded to a decision: made reachable on the Wildcard,
+or written off deliberately by ~GW15. Not left to expire by drift.
+
+**2. Pressure point 1 (GW4-5 Sunderland) - route RETIRED, not deferred.** Replaces:
+
+> **Sunderland wall GW4-5 bites** | ... Move **Le Fee**; Ballard is cheap bench cover.
+> | 1 FT
+
+The wall condition was met (SUN ARS(H)4, MCI(A)5) and the action was still withheld,
+because the route assumed a better-fixtured replacement existed at the price and none
+does: every candidate at or below 6.4 sums 10-11 over GW4-6 against Sunderland's 11.
+The fixture edge exists over two gameweeks and vanishes over three. Le Fee returns to
+the general wildcard pool. Recorded because this is the plan's own "a pressure point
+failing to bite" ground, and the GW10 count of amendments should show it.
+
+**3. Two new pressure points the 21 Aug FDR analysis could not see.** The four listed
+were derived from the fixture grid alone, which is blind to both:
+
+- **GW5 - the European cliff plus a class-A collision.** Six starters take on midweek
+  load for the first time, and Verbruggen and Gabriel need the same clean sheet in
+  BHA v ARS. XI FDR 3.18, the worst in the GW4-GW9 window.
+- **GW8 - ARS v EVE, class A.** Gabriel and Tarkowski, our two largest DefCon sources,
+  mutually exclusive. Inside the wildcard window, so the wildcard should design it out
+  rather than the week being survived.
+
+**4. Agile routes - status.** Tzolis exit: window closed after GW2 and the GW3
+trip-wire (a third early sub or a benching) did not fire - he played 90 and returned 5.
+Route CLOSED, he is a normal wildcard candidate. Obi route: STANDS, wildcard only.
+Haaland route: STANDS. Set-piece takers: amended 3 Sep, now B.Fernandes, Haaland, Gross.
+
+**5. Watchlist section - superseded in full** by the `watchlist` tab, refreshed 7 Sep.
+Two findings from that refresh belong here rather than in a cell:
+
+- **Szoboszlai's sale was an error, now confirmed.** His trigger was "recheck at GW3".
+  Rechecked: 90/90/90 and he is Liverpool's penalty taker, order 1. The role-change
+  read that sold him was wrong, and at 39.3% owned it is an EO hole as well as a
+  points one. Re-entry on the wildcard, never on a hit.
+- **The Mbeumo trigger is retired.** It read "if ownership climbs above ~45%".
+  Ownership has gone 37% -> 26%; over 500,000 managers sold him before GW3. A
+  one-directional trigger on a two-directional quantity is not a trigger.
+
+**6. Hull, recorded so GW10 can grade it.** The promoted-club rule (no COV/HUL/IPS
+starter before GW7) excluded the best value block of the season so far - Tzolakis,
+Ajayi, Egan and Giles at 4.0-4.6 for 20-26 points each. The rule is probably still
+right: Hull have three clean sheets from three against 5.05 xGC. But the exclusion was
+silent, and a rule that costs something without recording the cost cannot be graded.
+Both names are now on the watchlist tab, blocked with the reason attached.
+
+**7. Fixture grid - re-verified 7 Sep.** GW4-GW9 matches the 21 Aug grid exactly. No
+postponements, no rescheduling. The "fixtures past ~GW4 are fiction" warning has not
+yet bitten; re-pull each week regardless.
+
+**8. Loop changes that affect what this plan consults.** The review is now ten steps
+plus **5b, a wider-context sweep** (forums, blogs, expert sites) under the new
+`[community, date]` tag - hypotheses only, never evidence, barred from any scorecard or
+amendment until confirmed live. And `collisions.py` now runs alongside `check_squad.py`.
+The "What to check first" list below should be read as four items, not three: add
+**own-club collisions across the next ~4 gameweeks**.
+
+**Logging note, unchanged from 3 Sep.** The *Amending this plan* steps still say to log
+plan-amendments in `decision_log`, which conflicts with the n=12 discipline. This
+amendment is in `ledger.md` and this file, not the tab. Still flagged for GW10.
