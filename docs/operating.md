@@ -60,6 +60,15 @@ Every substantive claim carries its source:
   claim is discarded. Distil it through `resolve_names.py`, never raw through an LLM.
 - **[memory]** — not fetched. Say so, treat as hypothesis.
 
+**Provenance is symmetric.** A claim that REMOVES an option carries a tag exactly like
+a claim that supports one. And a claim that an option is impossible, illegal,
+unaffordable or otherwise constrained must be **[live]-verified before it is used to
+reject**, never asserted. Ruled 7 Sep 2026 after process error n=15: a GW4 Free Hit was
+rejected on the ground that it meant not owning Haaland, which is not a constraint a
+Free Hit imposes. Three of the four worst calls in this project - the blanket Free Hit
+ban, the Szoboszlai sale, that n=15 claim - were untagged reasons for discarding an
+option, while the reasons for the pick were tagged properly.
+
 If you can't tag it, don't assert it. Most logged process errors were untagged claims
 from memory. Where a raw API field and documented behaviour disagree, the
 documentation wins until the field is understood (`price_change_deadlines` lists
