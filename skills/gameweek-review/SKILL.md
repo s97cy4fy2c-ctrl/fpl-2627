@@ -25,6 +25,10 @@ European qualification especially.
 Run `scripts/check_squad.py` for the mechanical steps. It exits non-zero on any
 hard-rule breach.
 
+Run `scripts/collisions.py squad.json --to <gw+4>` as well. Own-club head-to-head
+exposure, graded A/B/C (doctrine s9). Exits non-zero on 2+ class-A pairs in the XI.
+Class A and any class-B in the XI are a scorecard axis, ranked with the rest.
+
 ## The loop
 
 | # | Step | Output that must be stated |
@@ -34,11 +38,20 @@ hard-rule breach.
 | 3 | Set-piece diff vs baseline | changes, or "no change" |
 | 4 | Fixtures next 3 and 6, plus European load | which clubs swing |
 | 5 | Pool scan: hot-trend + solver upgrade candidates, unowned | named candidates, or "none clears the bar" |
+| 5b | Wider-context sweep: r/FantasyPL, FFScout, OneFPL, FPL Copilot, official FPL chip guidance. Distil in the sandbox | the digest, tagged `[community, date]` - hypotheses only, never evidence |
 | 6 | Consult the forward plan — standing intent, does it still hold | the intent + "holds" or "invalidated by [evidence]" |
 | 7 | Rank squad-states on the scorecard — Hold included | the ranked table |
 | 8 | Name the pick + the case against | the recommendation |
 | 9 | Captaincy in EO terms | the EO split, not a projection |
 | 10 | Decision-log line (incl. rejected alternative); update the rolling intent if it changed | the line + the amended intent, or "intent unchanged" |
+
+**Step 5b is not decision-bearing.** `[community]` claims are hypotheses to test. None
+may enter a scorecard, a decision-log line or a plan amendment until independently
+confirmed against live data, at which point it becomes `[live]` and the community
+claim is discarded. Distil with `scripts/resolve_names.py` once built - an LLM asked
+to summarise forum text invents player names (7 Sep: "Jude Bellingham" for Joao Pedro,
+Wirtz at Leicester). Resolve entities against the live roster BEFORE summarising, and
+drop any name in the digest that does not resolve.
 
 Steps 2 and 5 are the trend scan — cold on what we own, hot on what we don't.
 **Look every week. Act only on cause.** Step 6 consults the forward plan before any
