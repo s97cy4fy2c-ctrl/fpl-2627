@@ -12,7 +12,8 @@
       "decision_log",
       "benchmarks",
       "process_errors",
-      "watchlist"
+      "watchlist",
+      "rejections"
     ],
     "access": "Composio googlesheets toolkit. Rate limit 60 reads/min, 60 writes/min - batch writes."
   },
