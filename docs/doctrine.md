@@ -49,20 +49,42 @@ written rule disagree, **the rule wins and the disagreement is logged.** Run a b
 rebuild periodically to catch anchoring — but treat its divergences as findings to
 test one at a time, not to adopt wholesale.
 
-## 4. Chips are not played on vibes
+## 4. Chips are not played on vibes - but an unplayed chip scores zero
 
 Triggers are written in advance and held to. First set expires at the **GW19
 deadline, Sat 2 Jan 2027, 13:30 GMT**. Second set unlocks GW20.
 
-- **Wildcard** — target GW6-GW9, once six rounds of real data exist. Earlier only if
+**The expiry changes the arithmetic.** Verified 7 Sep 2026 `[live]`: every gameweek
+from GW4 to GW19 is a full ten-fixture round, all twenty clubs, and the season
+fixture list has zero unassigned fixtures. Blanks come from cup progression and
+rescheduling, which lands from January - after the reset. There is no blank in the
+first set's window.
+
+A chip with a hard expiry and no blank in its window has **no option value**.
+Holding it is not caution, it is a decision to score zero with it. So the bar is a
+**stopping rule, not a trigger**: play when the expected gain beats the best gain
+still plausibly available in the remaining window. Early in the window that bar is
+high. Late in it, "best available" collapses and almost anything beats expiry.
+
+Falsification: if a blank does emerge before GW19, this finding was wrong and the
+next review says so rather than quietly moving on.
+
+- **Wildcard** - target GW6-GW9, once six rounds of real data exist. Earlier only if
   4+ starters are unavailable/sold/demoted AND fixing it costs 3+ hits across two
   gameweeks. Never to chase a bandwagon.
-- **Bench Boost** — all four bench players confirmed starting. Realistically the week
-  after a Wildcard, which is what makes the bench playable.
-- **Triple Captain** — a premium on a home fixture rated 2, and only if he started and
+- **Bench Boost** - all four bench players confirmed starting. Realistically the week
+  after a Wildcard, which is what makes the bench playable. If still unreachable by
+  ~GW15, either the Wildcard failed to build a playable bench or the chip is being
+  written off - say which, don't drift into expiry.
+- **Triple Captain** - a premium on a home fixture rated 2, and only if he started and
   completed the previous two. Never in a gameweek of maximum uncertainty.
-- **Free Hit** — a blank gameweek. The "5+ unavailable" condition is decorative; five
-  simultaneous injuries essentially never happen. Not injury insurance.
+- **Free Hit** - **fixture-targeting is the primary use.** Upside, not damage
+  limitation. Ruled 7 Sep 2026, superseding "a blank gameweek. Nothing else", which
+  guaranteed the chip expired unused. The bar: our normal XI is structurally
+  compromised that week - collisions (s9), European load, a fixture cluster - AND a
+  one-week alternative carries real ceiling. A blank is still a valid trigger; it is
+  no longer the only one. Do not hold past ~GW15 waiting for a blank the fixture list
+  says is not coming.
 
 ## 5. Hits
 
@@ -138,3 +160,35 @@ fudges are countable at GW10.
 **Falsification at GW10.** If new-manager clubs outperformed, the thesis was wrong, and
 the review says so rather than quietly dropping it. Judge the demotion too: count the
 overrides, ask whether the discount was applied honestly or used as an excuse.
+
+---
+
+## 9. Own-club collisions - RULED 7 Sep 2026
+
+We hold nine of twenty clubs across fifteen players, so our own clubs meet each other
+in **every gameweek from GW4 to GW10** `[live]`. A rule that banned that would fire
+constantly and be ignored inside a fortnight, which is how the first transferability
+thesis died. So collisions are graded, never banned, and the grade turns on **what
+each player's points depend on**, not on his position label.
+
+| Class | Shape | Why it matters |
+|---|---|---|
+| **A** | Two clean-sheet assets on opposite sides | Mutually exclusive. Only one clean sheet can exist, so one of them is dead before kickoff |
+| **B** | Our attacker against our own clean-sheet asset | An internal hedge - the attacker returning is exactly what kills the clean sheet. Caps ceiling, and ceiling is where rank is made |
+| **C** | Attacker against attacker | Benign, and *better* in a free-scoring fixture: both can return. Two strikers opposed is not a problem |
+
+DefCon accrues regardless of the scoreline, so it never creates a collision.
+
+Class B is graded on live scoring rates, not reputation: `B!` when the attacking club
+scores above the league median per game AND the defending club concedes above it. The
+rates are printed alongside; nothing is projected.
+
+Mechanical part: `skills/gameweek-review/scripts/collisions.py`, which exits non-zero
+on 2+ class-A pairs in the XI. Judgment part: collisions are a **scorecard axis**,
+ranked with the others - they inform the pick, they do not decide it. And they are
+scored across the next ~4 gameweeks on any transfer, not just the upcoming one: a
+signing that looks clean on Saturday and collides three times by GW9 is a shape
+mistake, not a slot mistake.
+
+Known limitation: a never-playing reserve (0 minutes) still counts as a clean-sheet
+asset, so bench noise is over-reported. Recorded, not silently filtered.
