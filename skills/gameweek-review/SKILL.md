@@ -44,6 +44,7 @@ Class A and any class-B in the XI are a scorecard axis, ranked with the rest.
 | 8 | Name the pick + the case against | the recommendation |
 | 9 | Captaincy in EO terms | the EO split, not a projection |
 | 10 | Decision-log line (incl. rejected alternative); update the rolling intent if it changed | the line + the amended intent, or "intent unchanged" |
+| 10b | Log every rejected option to the `rejections` tab with its reason and reason_type. **If the decision involves a chip or the wildcard**, also state the strongest case FOR the top-ranked rejected option and what would have to be true for it to win | the rows, plus the steelman where it applies |
 
 **Step 5b is not decision-bearing.** `[community]` claims are hypotheses to test. None
 may enter a scorecard, a decision-log line or a plan amendment until independently
@@ -158,8 +159,12 @@ Tool responses dominate context cost. Any call that might return bulk data sets
 
 ## Provenance
 
-Tag every substantive claim [live] / [repo] / [mirror, date] / [memory]. Untagged
-claims from memory caused most of the logged process errors.
+Tag every substantive claim [live] / [repo] / [mirror, date] / [community, date] /
+[memory]. Untagged claims from memory caused most of the logged process errors.
+
+**This applies to reasons for REJECTING an option, not just reasons for the pick.** A
+claim that an option is impossible, illegal, unaffordable or constrained must be
+[live]-verified before it is used to reject. See operating.md and process error n=15.
 
 ## Output
 
