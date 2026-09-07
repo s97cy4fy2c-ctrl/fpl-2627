@@ -290,3 +290,50 @@ break, the Free Hit becomes the pick.**
 Chip sequence beyond GW4 is 50/50 between "Free Hit GW5, Wildcard GW6" and "Wildcard
 GW6, Free Hit later", to be settled with GW4 results in hand. Prior lean of 60/40 for
 the latter rested partly on the n=15 error and has been withdrawn.
+
+
+### 7 Sep 2026 (2) - validating rejections - RULED
+
+The gap: every check we owned validated the option being chosen. Nothing held the
+reasons for discarding the others to the same standard. Four cases, one shape - an
+option removed by a claim that never faced the evidence bar the supporting claims face:
+the blanket Free Hit ban (asserted, never argued); "a Free Hit means not owning
+Haaland" (n=15, a constraint that does not exist); the Szoboszlai sale (a role read
+tagged nowhere and never re-verified until its own trigger forced it, and wrong); and
+Hull's defence, excluded silently by the promoted-club rule with no record of the cost.
+
+Three fixes, adopted together. A fourth was considered and declined.
+
+**A. Provenance is symmetric.** `operating.md`. A claim that REMOVES an option carries a
+tag like any other, and a claim that an option is impossible, illegal, unaffordable or
+constrained must be **[live]-verified before it is used to reject**. Near-zero cost,
+and it covers the factual subclass where three of the four cases sat.
+
+**B. Steelman gate, scoped.** Skill step 10b. On chip and wildcard decisions only, state
+the strongest case FOR the top-ranked rejected option and what would have to be true for
+it to win. Scoped deliberately: applied to every rejected transfer it becomes ceremony,
+and ceremony gets skipped. This is the one that would have caught the Free Hit ban.
+
+**C. `rejections` tab.** One row per rejected option: reason, reason_type, provenance,
+would_win_if, graded_at, verdict. Graded at GW10 and GW19 **by reason_type** alongside
+the decision log by category (`doctrine.md` s6). Prevention is not the point -
+countability is, and that is what turned `process_errors` from a list into the thing
+that drove the redesign.
+
+Seeded with fourteen rejections that were **recorded in writing at the time**, from
+`decision_log`, `ledger.md` and the watchlist - not reconstructed, which would repeat the
+error the empty decision_log was protecting against. Three already read badly and are
+marked as such rather than left flattering: Shaw->De Cuyper (21 pts to 7), Sangare over
+Ampadu (2/3 delivered to 1/3), and Szoboszlai (wrong, confirmed).
+
+**D. Mechanical feasibility checker - DECLINED for now.** A script confirming a rejected
+option really is infeasible when we claim infeasibility would catch n=15 exactly, but
+most rejections are not feasibility claims. Over-engineering off a single instance.
+Revisit if a second feasibility error appears.
+
+**Stated limit.** None of these reliably catches a subtly wrong judgment. Had n=15 read
+"the Free Hit's fixture gain is too small to justify the chip" - a claim, tagged,
+verifiable in form - and simply been wrong about the magnitude, all three fixes pass it
+through. The aim is to make the factual subclass mechanical and the judgment subclass
+countable at GW10. The rest still depends on the manager reading carefully, which is
+what caught n=15.
