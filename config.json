@@ -108,5 +108,14 @@
       "FWD": 12
     },
     "_note": "API field `defensive_contribution` is a raw ACTION COUNT (CBI+tackles+recoveries), NOT points, and `_per_90` is a rate. Points DELIVERED must be counted per match from a completed-season archive. See build.py:defcon_delivered()."
+  },
+  "player_aliases": {
+    "_source": "r/FantasyPL usage observed 1-7 Sep 2026, each target verified against bootstrap-static web_name on 2026-09-07",
+    "_warning": "NICKNAMES ONLY. Diacritic-stripped forms, surnames and first-initial forms are DERIVED in resolve_names.py from the live roster - do not hand-type them here. This block exists because an LLM summariser expanded 'JP' to 'Jude Bellingham' (process error n=15 family).",
+    "JP": "João Pedro",
+    "Bruno": "B.Fernandes",
+    "Tark": "Tarkowski",
+    "Szobo": "Szoboszlai",
+    "Verb": "Verbruggen"
   }
 }
