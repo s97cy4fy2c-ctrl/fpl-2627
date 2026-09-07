@@ -218,3 +218,75 @@ if he is ruled out nothing changes (already behind Ballard, Obi last).
 ### Plan amendment — 3 Sep 2026
 
 Recorded in prose, not the `decision_log` tab (transfer rows only, per n=12). `plan_gw1_gw10.md` amended by dated append: Ndiaye's EVE→MCI transfer supersedes four 21-Aug lines (European load, GW7-8 Everton pressure point, Everton-wall route, set-piece takers). Set-piece takers now B.Fernandes, Haaland, Groß; Everton exposure is Tarkowski only; Groß (BHA) carries UECL load ~Oct. Originals preserved. The plan's "How" step still says to log amendments in `decision_log`, which conflicts with the n=12 discipline — flagged in the plan append for GW10 reconciliation.
+
+
+### 7 Sep 2026 - structural rulings (post-GW3, pre-GW4)
+
+Manager rulings, recorded in prose per the n=12 tab discipline. Not `decision_log` rows.
+
+**1. Wider-context sweep - RULED.** The weekly loop takes no input from forums, blogs
+or expert sites. `plan_gw1_gw10.md` lists community noise under *Not grounds*, and
+`operating.md` flags the token cost of one Reddit search. That removed an entire input
+class because a single early sweep was low-signal. The sweep returns as **step 5b**,
+under a new provenance tag **`[community, date]`**: a hypothesis to test, never
+evidence, barred from any scorecard, decision-log line or plan amendment until
+confirmed independently against live data. Committed to `operating.md` and the skill.
+
+**2. Own-club collisions - RULED.** Doctrine s9. The grade turns on point source, not
+position: two clean-sheet assets opposed is class A (mutually exclusive); our attacker
+against our own clean-sheet asset is class B (an internal hedge); attacker against
+attacker is class C and benign, and better in a free-scoring fixture. DefCon never
+collides. Class B is graded on live GF/GA rates, marked `B!` when both sides clear the
+league median. Mechanical part in `skills/gameweek-review/scripts/collisions.py`,
+exits non-zero on 2+ class-A in the XI. Collisions are a scorecard axis and are scored
+across the next ~4 GWs on any transfer, not just the upcoming one.
+
+Live at ruling `[live, 7 Sep]`: we hold 9 of 20 clubs, so collisions occur in every
+gameweek GW4-GW10. GW4 has 0 class A and 2 class B in the XI (Haaland/Shaw is `B!`).
+**GW5 has a class A in the XI (Verbruggen/Gabriel). GW8 has Gabriel/Tarkowski - our two
+largest DefCon assets, mutually exclusive, inside the wildcard window.**
+
+**3. Chips as a stopping rule - RULED.** Doctrine s4 rewritten. Verified `[live, 7 Sep]`:
+every gameweek GW4-GW19 is a full ten-fixture round and the season fixture list has
+zero unassigned fixtures, so **no blank exists before the first set expires on 2 Jan
+2027**. The old Free Hit rule ("a blank gameweek. Nothing else") therefore guaranteed
+the chip expired unused. A chip with a hard expiry and no blank in its window has no
+option value. Fixture-targeting is now the Free Hit's primary use; a blank remains
+valid but is no longer the only trigger; backstop ~GW15. Bench Boost is currently
+unplayable (Obi and Dubravka on 0 minutes) and must be either made reachable on the
+Wildcard or written off deliberately. Falsifiable: if a blank emerges before GW19 the
+finding was wrong and the next review says so.
+
+**4. Name resolution - BUILT.** `resolve_names.py`. Variants derived from the live
+roster; nicknames only in `config.json["player_aliases"]`, sourced and dated. Tag
+before summarising, check after; an unresolved name is dropped, not reported.
+
+### Process errors - updated 7 Sep 2026
+
+Entry **n=15** logged: argued against a GW4 Free Hit on the false ground that it would
+mean not owning Haaland. A Free Hit imposes no such constraint. The alternative had
+been unbanned in the same session precisely for having been defeated by assertion, and
+was then defeated by assertion again. Family metric-misuse 2->3; caught-by manager
+8->9. Self-caught share 4/14 -> **4/15**, the wrong direction for the third consecutive
+entry. If that ratio has not turned by GW10 the redesign did not work and the GW10
+review says so plainly.
+
+Standing gap, not yet fixed: `check_squad.py` and `collisions.py` validate the option
+we propose. Nothing validates the reasons we reject the ones we don't. n=15 lived
+there.
+
+### GW4 - OPEN, not ruled (as of 7 Sep 2026)
+
+Deadline Sat 12 Sep, 13:30 BST. Manager is reviewing again closer to the deadline;
+this entry records the state, not a decision.
+
+Current lean: **Hold, 2 FTs banked, captain Haaland, vice moved B.Fernandes ->
+Joao Pedro.** Called at ~55/45 over a GW4 Free Hit after the n=15 correction, on three
+grounds: the XI already holds four of the six fixtures rated 2; a Free Hit fixes
+nothing structural; and GW5 and GW8 are more compromised weeks. Pre-stated tie-breaker:
+**if Thursday or Friday team news puts 2+ of the XI in doubt after the international
+break, the Free Hit becomes the pick.**
+
+Chip sequence beyond GW4 is 50/50 between "Free Hit GW5, Wildcard GW6" and "Wildcard
+GW6, Free Hit later", to be settled with GW4 results in hand. Prior lean of 60/40 for
+the latter rested partly on the n=15 error and has been withdrawn.
