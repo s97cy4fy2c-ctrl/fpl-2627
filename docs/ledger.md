@@ -337,3 +337,106 @@ verifiable in form - and simply been wrong about the magnitude, all three fixes 
 through. The aim is to make the factual subclass mechanical and the judgment subclass
 countable at GW10. The rest still depends on the manager reading carefully, which is
 what caught n=15.
+
+### GW4 - RULED at the deadline (12 Sep), recorded 17 Sep 2026
+
+Recorded after GW4 finished, on manager instruction. The ruling was not committed at the
+deadline, and the post-mortem nearly graded the wrong decision because of it (n=17).
+
+**Transfers - 2 FTs, no hit, no chip.** B.Fernandes (sold 12.0) -> Palmer (9.7). E.Le Fée
+(sold 5.8) -> Rogers (7.6). Both made ~00:10 UTC 12 Sep [live]. ITB 1.0 after. The manager
+raised the pair on a value argument. The review endorsed it on fixtures and structure, not
+value. `decision_log` carries both rows.
+
+**Recommended at the deadline** [12 Sep review, held twice]. Captain Haaland, vice João Pedro.
+XI 3-5-2: Verbruggen; Gabriel, Ballard, Tarkowski; Palmer, Rogers, Groß, Tzolis, Ampadu;
+Haaland, João Pedro. Bench: 1 Kadıoğlu, 2 Shaw, 3 Obi. Shaw benched on a 75% flag -
+`check_squad.py` exits 1 with him in the XI.
+
+**Fielded** [live]. The same XI with **Kadıoğlu for Ballard**. Captain **Palmer**, vice
+Haaland. Bench: 1 Ballard, 2 Shaw, 3 Obi. Reserve GK Dubravka.
+
+**Two manager overrides. Neither was written down before the deadline.**
+
+1. **Kadıoğlu over Ballard.** It puts the Brighton GK+DEF pair (Verbruggen + Kadıoğlu) in
+   the XI, which the squad rules bar [repo]. Result: Kadıoğlu 6, Ballard 0 (conceded 2,
+   yellow). BHA won 5-0 at COV, so the correlated bet paid both legs.
+2. **Armband: Haaland -> João Pedro -> Palmer.** The manager pushed for Palmer. The review
+   held Haaland twice. The manager moved it to João Pedro, then to Palmer at the last
+   minute. No new information existed: Chelsea kicked off 90 minutes after the deadline
+   [live]. Result: Palmer 5, Haaland 9, João Pedro 12.
+
+**Result** [live]. 97 points against an average of 69. GW rank 349,614. Overall rank
+1,885,177 -> 702,711. Bench 0.
+
+| Team | Captain | DEF | GW4 |
+|---|---|---|---|
+| Recommended | Haaland | Ballard | 95 |
+| Manager's first override | João Pedro | Kadıoğlu | 104 |
+| Fielded | Palmer | Kadıoğlu | 97 |
+
+Manager overrides net +2 against the recommendation: Kadıoğlu +6, armband -4. The final
+switch cost 7 against the João Pedro armband.
+
+**Post-mortem - process v variance** (doctrine s6).
+
+- **Transfers: process sound, outcome ahead, verdict at GW7.** 13 v 2 in GW4. Palmer v Bruno
+  is level on underlying (0.38 v 0.36 xGI), so +3 is noise. Rogers v Le Fée is 0.23 v 1.44
+  xGI, and Le Fée missed a penalty (-2). The +8 is mostly finishing variance.
+- **Armband: bad process, bad outcome.** The review's call held on underlying inside the
+  match: Haaland 0.88 xGI, Palmer 0.38, João Pedro 0.33 [live]. Two changes, no new cause.
+  The João Pedro armband would have gained 3, and that would have been variance too. The
+  error is the unrecorded override, not the 4 points.
+- **Kadıoğlu: the review's rejection was the weaker read.** It adjusted Brighton's defence
+  (5.71 xGC in 3) but not Coventry's attack: 0 goals from 2.88 xG in GW1-3 [live]. Ballard
+  faced Arsenal (4.98 xG). Doctrine s2 says fixture-adjust before comparing. Graded WRONG in
+  `rejections`. The override still broke a written rule and was not recorded. One clean
+  sheet does not make the pair safe.
+- **Groß for Ndiaye (GW3): +16 in GW4** (17 v 1). Top scorer of the week [live]. Bought for
+  the pen role, not form.
+
+**Frozen XI.** 68 in GW4, 265 in total. Actual 301, so +36 [live]. GW3 +7: TC +9, Groß v
+Ndiaye -2. GW4 +29: Groß +16, Rogers +8, Kadıoğlu v Shaw +6, Palmer v Bruno +3, armband -4.
+`benchmarks` rows GW3 and GW4 written 17 Sep. The template XI still has no construction rule.
+
+**Set pieces.** No change in the 15. Pen takers are now Haaland, Groß, Palmer - still three
+[live]. DefCon delivered in GW4: Gabriel +2, Ampadu +2.
+
+**Rejected** (`rejections` tab): Hold, S2 Palmer-only, S3 Palmer + Barry (excluded by the
+argued Barry fence, not outscored; Barry 2 in GW4), Free Hit GW4, Palmer (C), Kadıoğlu start.
+João Pedro (C) was not recorded as a rejection at the time, so it is not seeded.
+
+**Forward intent.** See the 17 Sep append in `plan_gw1_gw10.md`.
+
+**Supersedes** the "GW4 - OPEN, not ruled (as of 7 Sep 2026)" entry above.
+
+### Process errors - updated 17 Sep 2026
+
+**n=16, self-caught (11 Sep).** The watchlist `Palmer` row carried Alex Palmer's (IPS GK)
+price and ownership. The `notes` column is shifted against the other columns on at least
+five rows. New family label: name-resolution. Palmer row corrected and closed 17 Sep. The
+notes shift is NOT repaired - which note belongs to which row is unknown. Open item.
+
+**n=17, caught by manager (17 Sep).** In the post-GW4 review's second pass, withdrew a
+correct finding - the recommendation was Haaland and Ballard, held twice per the retrievable
+record - on an unverified recollection, and rebuilt the review on it. Doctrine s7: no
+agreeing because pushed. An earlier draft n=17 ("called the 11:32 call final") was proposed
+in the same thread and withdrawn. It was never written. Fix: when the record and a
+recollection conflict, hold the record, state the conflict, and ask. Commit the GW ruling at
+the deadline, so a post-mortem never depends on chat retrieval.
+
+Deltas since n=15: family process 4->5, name-resolution 0->1. Caught-by self 4->5, manager
+9->10. Self-caught share 4/15 -> **5/17**. Still the wrong direction into GW10.
+
+### 17 Sep 2026 - open items from the GW4 post-mortem
+
+Filed open. None is ruled.
+
+| Item | Status |
+|---|---|
+| Armband lock | PROPOSED. The armband stays at the last recorded call. A change needs a named cause (availability or confirmed news) and a one-line reason written before the deadline, so GW10 can count overrides as doctrine s8 does. Awaiting ruling |
+| GK+DEF pair: warn or fail | CONFLICT. `operating.md` lists it as a coded cap. `check_squad.py` only warns. The GW4 XI started the pair. Reconcile at GW10 |
+| Template XI | NO RULE. `benchmarks.template_xi_pts` is blank for all four rows. Without a construction rule GW10 has one benchmark, not two |
+| Watchlist notes shift | OPEN (n=16). Rebuild row by row |
+| Set-piece baseline | GAP (found 11 Sep). `baseline_snapshot_20260803.csv` has no set-piece columns, so review step 3 cannot diff against data |
+| Mirror note in `config.json` | STALE (found 11 Sep). It says frozen at 3 Aug; the mirror had 616 rows on 11 Sep |

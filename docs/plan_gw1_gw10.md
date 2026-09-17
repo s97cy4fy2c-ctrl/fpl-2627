@@ -316,3 +316,36 @@ The "What to check first" list below should be read as four items, not three: ad
 **Logging note, unchanged from 3 Sep.** The *Amending this plan* steps still say to log
 plan-amendments in `decision_log`, which conflicts with the n=12 discipline. This
 amendment is in `ledger.md` and this file, not the tab. Still flagged for GW10.
+
+### 17 Sep 2026 - post-GW4 amendment
+
+Grounds: *transfer, in or out* (Bruno and Le Fée sold, Palmer and Rogers bought),
+*availability* (Obi loaned out), and a set-piece change in the 15. Evidence is
+`[live, 17 Sep]` unless tagged otherwise. `ledger.md` carries the GW4 ruling.
+
+**1. Set-piece takers - superseded.** Replaces "B.Fernandes, Haaland, Gross" (3 Sep). Now
+**Haaland, Groß, Palmer**. Palmer is Chelsea's penalty taker, order 1. Still three.
+
+**2. Pressure point 1 (Sunderland wall) - CLOSED by sale.** Le Fée left at GW4. Sunderland
+exposure is Ballard only, on the bench.
+
+**3. Chelsea - new concentration.** Palmer, Rogers, João Pedro: the club maximum, and one
+attacking point source. Chelsea have no European football [repo config]. João Pedro is
+flagged 75%, unspecified injury (news 16 Sep).
+
+**4. Obi - availability.** Loaned to Willem II for the rest of the season (news 14 Sep),
+status `u`. The Obi route stands and is now forced: Wildcard only. Until then the bench has
+two outfielders who can play, Ballard and Shaw (75%). Bench Boost stays unreachable until
+the Wildcard. The ~GW15 decision in doctrine s4 stands.
+
+**5. Standing intent.** Drafted 12 Sep. Recorded 17 Sep on manager instruction.
+- **GW5** (deadline Fri 18 Sep, 18:30 BST): lean **hold the Free Hit**, ~55/45.
+  Tie-breaker: 2+ of the XI flagged after the European midweek means Free Hit GW5. At
+  17 Sep 11:21 UTC it stands at 1 (João Pedro). Not fired.
+- **GW6 Wildcard** (deadline Sat 10 Oct, 11:00 BST): brief unchanged, plus a playing
+  forward for Obi (Barry is the watchlist name) and a playable bench. Palmer and Rogers are
+  re-argued from scratch, not defended.
+- **Resources for GW5:** 1 FT, ITB 1.0 [live].
+
+**Logging note, unchanged.** This amendment is in `ledger.md` and this file, not in
+`decision_log`.
