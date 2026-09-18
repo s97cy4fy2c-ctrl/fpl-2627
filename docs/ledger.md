@@ -440,3 +440,39 @@ Filed open. None is ruled.
 | Watchlist notes shift | OPEN (n=16). Rebuild row by row |
 | Set-piece baseline | GAP (found 11 Sep). `baseline_snapshot_20260803.csv` has no set-piece columns, so review step 3 cannot diff against data |
 | Mirror note in `config.json` | STALE (found 11 Sep). It says frozen at 3 Aug; the mirror had 616 rows on 11 Sep |
+
+### GW5 - RULED before the deadline (18 Sep 2026, ~17:15 BST)
+
+Committed before the 18:30 BST deadline, per the n=17 fix. Post-deadline items are listed at the foot.
+
+**Transfer - 1 FT, no hit, no chip.** João Pedro (CHE) -> Calvert-Lewin (LEE, 6.0). Made in-app [screenshot, 17:04 BST]. The public transfers endpoint shows nothing for GW5 pre-deadline [live]. Verify against the GW5 picks after the deadline.
+
+**Cause: availability.** FPL flag 75%, unchanged since 16 Sep [live]. ESPN reported a knee injury, about 3.5 weeks out, and withdrawal from Brazil's squad [press, 18 Sep]. Alonso said nobody was ruled out before Friday's session [press, 17 Sep]. Called ~80% to miss GW5, with GW6 at risk. Injury protocol: starter out 2-4, spare FT.
+
+**Replacement - the review moved during the session.**
+1. First pick Barry (EVE, pen 1, IPS home), on an unadjusted xGI/90 comparison.
+2. Manager challenged Barry's blanks. Per-match xG showed volume in every match (2.98 xG, 1 goal) [live]. Fixture-adjusted, Calvert-Lewin's output was level. Barry held 55/45 on EO only.
+3. Manager leaned Calvert-Lewin on form. Team data backed him: CRY xGC 2.04/g v IPS 1.69/g; LEE xG 1.66/g v EVE 1.22/g [live]. The review moved to Calvert-Lewin, 55/45.
+Logged rationale is the underlying team data. Manager's stated reason was form. GW10 should grade it as the logged rationale, and note the stated one.
+
+**Captain Haaland, vice Palmer.** Matches the recommendation. Haaland 73.2% owned [live]. Tier EO not measurable pre-deadline.
+
+**Recommended XI.** Verbruggen; Gabriel, Tarkowski, Ballard; Palmer, Rogers, Groß, Tzolis, Ampadu; Haaland, Calvert-Lewin. Bench: Dubravka; 1 Kadıoğlu, 2 Shaw, 3 Obi. `check_squad.py` and `collisions.py` both pass [live].
+
+**Fielded XI** [screenshot, 17:04 BST]. The same, with **Kadıoğlu for Ballard**. Bench: Dubravka; 1 Ballard, 2 Shaw, 3 Obi.
+
+**Manager override - Kadıoğlu over Ballard. Written before the deadline.**
+- Effect: `collisions.py` exits 1, with two class-A pairs in the XI (Verbruggen-Gabriel, Kadıoğlu-Gabriel). `check_squad.py` warns on the BHA GK+DEF pair [live].
+- Manager's reason, stated before the deadline: form over everything else; the better player for the better team; Arsenal and City are both tough opponents, so there is not much in it.
+- Review's counter [live, GW1-4]: BHA xGC 7.04 v SUN 5.84. Kadıoğlu 8 pts and 0/3 DefCon delivered; Ballard 12 pts and 2/4. ARS 6.87 xG v MCI 7.94, so the clean-sheet odds are level and Ballard's DefCon route decides it. Called ~60/40 Ballard, low stakes.
+- Grade on process v variance (doctrine s6), not the GW5 result alone. This is the second consecutive Kadıoğlu-over-Ballard override. GW4's was graded right on a fixture-adjust.
+
+**Chips - none.** Free Hit held: the tie-breaker (2+ of the XI flagged) stood at 1 [live]. Wildcard GW6 stands, deadline Sat 10 Oct 11:00 BST [live]. No PL fixture 22 Sep - 9 Oct [live].
+
+**Open - awaiting manager ruling.**
+- n=18 candidate, self-caught. `config.json` `first_midweek_load` says the league phase starts 15-17 Sep, "i.e. GW5". UCL MD1 was 8 Sep (Porto 0-2 Man City) [press, ESPN]. Another hand-typed constant.
+- n=19 candidate, caught by manager. An unadjusted per-90 comparison (Barry v Calvert-Lewin), and a rejection reason (Leeds' six-GW run) that the GW6 Wildcard voids. No decision changed.
+- Armband lock: still PROPOSED.
+- Project prompt still names the archived behaviour/method/data/analysis.md as operating instructions. n=14 family. Update it to operating.md and doctrine.md.
+
+**Post-deadline, not yet done.** `decision_log` row; `rejections` rows (Hold, Barry, Free Hit GW5, Wildcard GW5, Ballard start); plan append; transfer verification.
