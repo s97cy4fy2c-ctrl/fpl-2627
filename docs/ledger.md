@@ -476,3 +476,31 @@ Logged rationale is the underlying team data. Manager's stated reason was form. 
 - Project prompt still names the archived behaviour/method/data/analysis.md as operating instructions. n=14 family. Update it to operating.md and doctrine.md.
 
 **Post-deadline, not yet done.** `decision_log` row; `rejections` rows (Hold, Barry, Free Hit GW5, Wildcard GW5, Ballard start); plan append; transfer verification.
+
+### GW6 - RULED before the deadline (10 Oct 2026, ~10:50 BST)
+
+**Context.** Session opened ~20 minutes before the deadline. No GW6 moves had been made. Rank 264,742 after GW5 [live]. 1 FT, ITB 2.6 [live]. Set-one chips left: Wildcard, Free Hit, Bench Boost [live].
+
+**Process.** The first pass was API-only. The manager asked for the full sweep. The 10-step loop was then run from the live repo `SKILL.md`. Done: staleness (current), squad health, fixtures GW6-11, pool scan, r/FantasyPL sweep, plan consult, scorecard, captaincy EO. Not run: `check_squad.py`, `collisions.py`, OneFPL, FPL Copilot. Set-piece diff not possible: `data/baseline_snapshot_20260803.csv` has no set-piece columns.
+
+**Transfer.** Tzolis -> Mbeumo, free transfer. Ground: availability. Tzolis hamstring, expected back 24 Oct [live]. Mbeumo: best xGI/90 of fit mids <=8.9 (0.77), 450 of 450 mins, pen order 2, TOT (H) FDR 2 [live]. Hold ranked second. The one-week gain is close to the value of a banked FT. Mbeumo is re-argued from scratch on the Wildcard. Man United's GW6-11 run is bottom-six [live].
+
+**Wildcard deferred, GW6 -> GW7.** The ground is process, not evidence. The squad-build checks could not run in the time left. That is not a listed amendment ground. The manager accepted it. Plan amended under the same date.
+
+**Free Hit.** Not fired. No blank or double in GW6 [live].
+
+**Captaincy.** Haaland (C), Groß (VC). Haaland 74.3% owned [live]. City team news says he is fine [community, 9 Oct].
+
+**Lineup - manager override, stated before the deadline.**
+- Review: start Shaw, bench Kadıoğlu. Verbruggen + Kadıoğlu is the barred BHA GK+DEF pair (doctrine).
+- Manager started Kadıoğlu over Shaw. Reason: trusts Kadıoğlu's form more.
+- Review's counter: form alone is a trigger to look, not to act. Shaw has TOT (H) FDR 2; Kadıoğlu has SUN (a) [live]. Shaw carries real minutes risk: 0 mins GW4, 83 GW5 [live].
+- Third consecutive Kadıoğlu override (GW4, GW5, GW6). GW4's was graded WRONG for the review. Grade on process v variance, not the GW6 result alone.
+
+**Collision, accepted.** ARS v LEE in GW6: Gabriel against Calvert-Lewin and Ampadu. Present under every option. Not graded by script.
+
+**Community flags, not acted on.** Palmer: bookmaker Chelsea goals dipped ~0.1 on deadline morning; some read it as a start doubt [community, 10 Oct]. FPL flag clean [live].
+
+**Written this session.** `rejections` rows 22-27 (Hold, Wildcard GW6, Free Hit GW6, Kadıoğlu start, Ødegaard, Groß (C)). Plan amendment, 10 Oct.
+
+**Post-deadline, not yet done.** Transfer verification: the GW6 transfer was not visible in `entry/50930/transfers/` at 09:50 UTC [live]. The `decision_log` row waits for it. GW5 backlog still open: `decision_log` row (João Pedro -> Calvert-Lewin), GW5 `rejections` rows, GW5 plan append [live, sheet read 09:50 UTC].

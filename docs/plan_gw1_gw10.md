@@ -349,3 +349,16 @@ the Wildcard. The ~GW15 decision in doctrine s4 stands.
 
 **Logging note, unchanged.** This amendment is in `ledger.md` and this file, not in
 `decision_log`.
+
+### 10 Oct 2026 - GW6 amendment
+
+Grounds: *availability* (Tzolis out to 24 Oct, Ballard no return date [live]) and *transfer* (Tzolis -> Mbeumo). Moving the Wildcard is a process call, not a listed ground. The manager accepted it. `ledger.md` carries the GW6 ruling.
+
+**Replaces** (17 Sep standing intent): "**GW6 Wildcard** (deadline Sat 10 Oct, 11:00 BST): brief unchanged, plus a playing forward for Obi (Barry is the watchlist name) and a playable bench. Palmer and Rogers are re-argued from scratch, not defended."
+
+**With:**
+- **GW7 Wildcard**, deadline Sat 17 Oct, 11:00 BST [live]. Still inside the GW6-9 window.
+- Brief: a playing forward for Obi. A playable bench, so the Bench Boost becomes reachable. Ballard's slot (hamstring, no return date). Leeds x2: joint-worst GW6-11 run [live]. The Everton wall. Brighton x3 into LIV (a) GW8 and MCI (a) GW9 [live]. Design out the barred BHA GK+DEF pair.
+- Re-argued from scratch, not defended: Palmer, Rogers, Mbeumo. Mbeumo was a one-week fill.
+- Run the squad-build skill, `check_squad.py` and `collisions.py` before any pick is named.
+- Resources: the FT carries through the Wildcard. ITB after GW6 to be verified post-deadline.
