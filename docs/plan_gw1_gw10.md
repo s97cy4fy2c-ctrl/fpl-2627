@@ -362,3 +362,19 @@ Grounds: *availability* (Tzolis out to 24 Oct, Ballard no return date [live]) an
 - Re-argued from scratch, not defended: Palmer, Rogers, Mbeumo. Mbeumo was a one-week fill.
 - Run the squad-build skill, `check_squad.py` and `collisions.py` before any pick is named.
 - Resources: the FT carries through the Wildcard. ITB after GW6 to be verified post-deadline.
+
+
+### 17 Oct 2026 - GW7 executed; GW8-10 intent
+
+Grounds: the GW7 Wildcard executed as planned (10 Oct amendment). Squad and deviations are in `ledger.md` 17 Oct.
+
+**Replaces** (10 Oct): "GW7 Wildcard ... Brief: a playing forward for Obi ... Resources: the FT carries through the Wildcard."
+
+**With:**
+- **GW8 Bench Boost - trigger.** All four bench players start in GW7 and are unflagged at the GW8 deadline. Likely GW8 bench ~13 xPts [model]. Fails -> hold the chip.
+- **Belloumi - sell trigger.** Benched or under 60 mins in GW7 = named cause (role). First FT target.
+- **Rogers - watch.** Last 3 xGI/90 0.30; +2.1 goals over xG [live]. Look, not act, until a cause.
+- **Triple Captain - spent GW3.** (Judge's GW11 Haaland note is moot.)
+- **Free Hit** - unchanged: fixture-targeting by ~GW15.
+- **Resources:** FTs after the Wildcard and ITB £1.4m to be verified post-deadline [live].
+- **GW10 review adds:** the open doctrine amendments (D1, D2, D5, D7, D9, D11, D12, D14, D15) and the pipeline's first outing.

@@ -504,3 +504,34 @@ Logged rationale is the underlying team data. Manager's stated reason was form. 
 **Written this session.** `rejections` rows 22-27 (Hold, Wildcard GW6, Free Hit GW6, Kadıoğlu start, Ødegaard, Groß (C)). Plan amendment, 10 Oct.
 
 **Post-deadline, not yet done.** Transfer verification: the GW6 transfer was not visible in `entry/50930/transfers/` at 09:50 UTC [live]. The `decision_log` row waits for it. GW5 backlog still open: `decision_log` row (João Pedro -> Calvert-Lewin), GW5 `rejections` rows, GW5 plan append [live, sheet read 09:50 UTC].
+
+
+## 17 Oct 2026 - GW7 Wildcard ruling
+
+**Ruling.** Wildcard played GW7, deadline Sat 17 Oct 11:00 BST. Manager confirmed 10:00 BST.
+
+**Squad (15).** GK Trafford, Leno. DEF Calafiori, De Cuyper, Hall, Van Hecke, Silva. MID Saka, Groß, Rogers, Belloumi, Rudoni. FWD Haaland, João Pedro, Barry. Cost £98.1m on selling prices, ITB £1.4m [live]. Kept: Groß, Rogers, Haaland.
+
+**GW7 XI.** Trafford; Calafiori, De Cuyper, Hall, Van Hecke; Saka, Groß, Rogers, Belloumi; Haaland (C), João Pedro. Saka (VC). Bench: Leno, Barry, Silva, Rudoni.
+
+**How it was built.** A blind, multi-agent adversarial pipeline. Spec `docs/superpowers/specs/2026-10-17-gw7-wildcard-pipeline-design.md` (commit 05417b6).
+- Snapshot 01:33 BST, 436/436 histories [live]. Budget 995 after overnight price moves (Groß, Haaland +0.1, Mbeumo -0.1).
+- Research x5 (players, fixtures, news, Reddit, blogs). Fact base checked every community claim; 51 discarded.
+- Three blind builders (ceiling, template-plus, doctrine-free). The 16 Oct pick (C2') entered anonymised.
+- Two prosecutors, a doctrine challenger, four rebuttals, a fresh judge.
+- Verdict: winner squad A (builder X), runner-up C (doctrine-free), D (template) third, C2' last on points, leverage and bench.
+
+**Manager deviations from the verdict, stated before the deadline.**
+- Built his own blend: template core (Calafiori, De Cuyper, Groß, João Pedro, Rogers) plus Saka, Haaland.
+- Raya -> Trafford taken on review advice (Raya + Calafiori = one D13 slot for £12.0m).
+- Tavernier over Rudoni reversed on review advice (Rudoni 0.53 xGI/90 without best game v 0.35; pen 1 v 3).
+- Calafiori started over Silva (manager). Review agreed: Calafiori is not a pure floor asset.
+- **Belloumi kept and started over Barry - manager override.** Review: 3 goals from 0.69 xG GW4-6, minutes 59/82/26, pen 2; GW7 proj 3.09 v Barry 4.59 [live, model]. Manager: benched in GW6 then scored; expects him to start again. Supporting point: Hull manager said Gelhardt lacks rhythm [community, 15 Oct]. Sell trigger: benched again in GW7 = named cause (D3).
+
+**Scores on the shared yardstick, GW7-11 [live, model].** Final squad 282.3 xPts, leverage 189.6, bench 68.0. Squad A 284.6 / 208.1 / 75.1. The gap is the leverage cost of the template core.
+
+**Doctrine challenge.** Judge accepted amendments to D2, D5, D9, D11 (class A is not a collision), D12, D14, D15; amended D1 and D7 differently; kept D10 to its GW10 expiry. **None ruled.** Filed open for the GW10 review. D7 ('no projection model') was challenged by the pipeline's own design; the yardstick is recorded as a screen, gaps under ~5 xPts are ties.
+
+**Known gaps.** No 13-17 Oct source for MCI, IPS; no Coventry subreddit; one full published draft; no top-10k EO. Price table leaked ownership of 5 players to agents (process_errors n=23). Account usage limit paused the run 03:45-06:21 BST; no work lost.
+
+**Written this session.** decision_log GW7 row. rejections rows (squad A, D', C2', Belloumi->Ndoye/Tavernier, Barry start). process_errors n=20-23. Plan amendment 17 Oct. Not yet done: final code review of pipeline tools; commit of pipeline tools to `pipelines/wildcard/`; post-deadline verification of picks via `entry/50930/event/7/picks/`.
