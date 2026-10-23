@@ -535,3 +535,41 @@ Logged rationale is the underlying team data. Manager's stated reason was form. 
 **Known gaps.** No 13-17 Oct source for MCI, IPS; no Coventry subreddit; one full published draft; no top-10k EO. Price table leaked ownership of 5 players to agents (process_errors n=23). Account usage limit paused the run 03:45-06:21 BST; no work lost.
 
 **Written this session.** decision_log GW7 row. rejections rows (squad A, D', C2', Belloumi->Ndoye/Tavernier, Barry start). process_errors n=20-23. Plan amendment 17 Oct. Not yet done: final code review of pipeline tools; commit of pipeline tools to `pipelines/wildcard/`; post-deadline verification of picks via `entry/50930/event/7/picks/`.
+
+
+## 23 Oct 2026 - GW8 ruling
+
+**Ruled 15:53 BST, before the 18:30 deadline** [live]. 1 FT (confirmed by the manager), ITB £1.4m [live].
+
+**GW7 verified** [live, `entry/50930/event/7/picks/`]. Wildcard played. Picks match the 17 Oct ruling. 62 pts v average 59. Overall rank 298,350 -> 473,792. Bench 22 (Silva 8, Leno 6, Rudoni 6, Barry 2). Belloumi played 90, so his sell trigger did not fire. Belloumi v Barry override: 2 v 2.
+
+**Transfer - 1 FT, no hit.** Saka (ARS, sells £9.6) -> Mbeumo (MUN, £7.9). ITB £3.1m after. Made in-app by the manager. Verify against the GW8 picks after the deadline.
+
+**Cause: availability.** Saka came off at 10' at Bayern on 21 Oct with a quad injury [community, 22 Oct]. FPL flag went from 50% (22 Oct) to `i`, 0%, "unknown return date" (23 Oct) [live]. Arteta, 23 Oct: a second MRI, "a lot of fluid", "struggling to walk without pain... not good signs", no timeline [community, 23 Oct]. Called ~85-90% to miss GW9. Injury protocol: starter out 2-4, spare FT.
+
+**Why now, not after the scan.** The 22 Oct rule said "unknown -> hold". Withdrawn. Both routes give the same two moves over GW8-9 (process error n=25). Holding gains only if Saka is fit by GW9. Selling now banks Mbeumo's GW8 and Saka's full sale price before the drop: 492k managers sold him this GW [live].
+
+**Why Mbeumo.** 630/630 mins, 0.70 xGI/90, the best affordable mid on volume. Pen 2 [live]. The manager doubted him on United's form, the press and the Como defeat in the UCL. Review: no Mbeumo-specific cause. MUN 1.43 GF/g v BOU 1.29 [live]. Tavernier rated ~40/60: minutes 74/72/78, pen 3, and a third player in BOU v LEE in the Bench Boost week. The manager chose Mbeumo.
+
+**Chip - Bench Boost moved GW8 -> GW9.** Manager ruling, 22 Oct. Grounds: availability (Saka) and the doctrine s4 stopping rule. The GW9 bench fixtures are stronger and no European midweek precedes GW9 [live]. Plan amended.
+
+**Captain Haaland, vice João Pedro.** Haaland 76.9% owned [live], so captaining him is the defensive play. Tier EO not measurable.
+
+**XI, 4-4-2.** Trafford; Calafiori, De Cuyper, Hall, Silva; Mbeumo, Groß, Rogers, Rudoni; Haaland (C), João Pedro (VC). Bench: Leno; 1 Barry, 2 Van Hecke, 3 Belloumi.
+- Silva for Van Hecke: DefCon delivered 5/7 v 3/7. It also removes two class-B pairs (Chelsea attackers v Van Hecke).
+- Rudoni for Belloumi: pen 1, 0.58 v 0.28 xGI/90, FUL (H) v BRE (H).
+- `check_squad.py` and `collisions.py` both exit 0. Repo scripts run against the live API. One class B! in the XI: Mbeumo v Silva (MUN v BOU). Accepted.
+
+**Rejected** (`rejections`): Bench Boost GW8; hold Saka until the scan; Tavernier; Cherki; Ødegaard; Belloumi start.
+
+### Process errors - updated 23 Oct 2026
+
+**n=24, caught by manager.** The 22 Oct review stated 2 FTs for GW8, "derived" from a claim that a Wildcard keeps the FT. That was a rule asserted from memory and wrong; the manager confirmed 1. Not used to reject anything. Corrected before use.
+
+**n=25, self-caught.** On 22 Oct the review argued that holding the FT gave GW9 two moves while selling Saka left one. Both routes give two moves over GW8-9, because the Saka fix uses a GW9 FT either way. This false reason held off the sell-now option for a day. It is the n=15 shape: a rejection reason that never faced the arithmetic. Corrected before the deadline. No cost.
+
+**n=26, self-caught.** The Skill tool again loaded the stale `/mnt/skills` 9-step snapshot (n=14 repeat). Caught and switched to the repo 10-step version. The mount is outside our control; the `operating.md` rule held.
+
+Deltas: caught-by self +2, manager +1.
+
+**Still open.** The project prompt still names the archived behaviour/method/data/analysis.md as operating instructions (open since GW5). The set-piece baseline still has no set-piece columns.
