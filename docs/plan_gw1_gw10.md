@@ -378,3 +378,20 @@ Grounds: the GW7 Wildcard executed as planned (10 Oct amendment). Squad and devi
 - **Free Hit** - unchanged: fixture-targeting by ~GW15.
 - **Resources:** FTs after the Wildcard and ITB £1.4m to be verified post-deadline [live].
 - **GW10 review adds:** the open doctrine amendments (D1, D2, D5, D7, D9, D11, D12, D14, D15) and the pipeline's first outing.
+
+
+### 23 Oct 2026 - GW8 amendment
+
+Grounds: *availability* (Saka `i`, unknown return [live]) and *transfer* (Saka -> Mbeumo). `ledger.md` carries the GW8 ruling.
+
+**Replaces** (17 Oct): "**GW8 Bench Boost - trigger.** All four bench players start in GW7 and are unflagged at the GW8 deadline. ... Fails -> hold the chip."
+
+**With:**
+- **GW9 Bench Boost - trigger.** Deadline Sat 31 Oct, 11:00 GMT [live]. Fires if all 15 are unflagged at the deadline and each started GW8. Fails -> hold the chip. The doctrine s4 backstop (~GW15) stands.
+- **GW9 FT (one).** First target: the Silva v Trafford class A in BOU v LEE. Second: Belloumi, now benched on merit. One move, decided in the GW9 review.
+- **Belloumi sell trigger - closed.** He played 90 in GW7.
+- **Saka - sold.** Re-entry only on a cause.
+- **Rogers - watch.** Unchanged.
+- **Resources:** 1 FT for GW9, ITB £3.1m. Verify after the deadline.
+
+**Logging note, unchanged.** This amendment is in `ledger.md` and this file, not `decision_log`.
