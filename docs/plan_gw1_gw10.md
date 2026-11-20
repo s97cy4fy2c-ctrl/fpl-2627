@@ -1,5 +1,9 @@
 # plan_gw1_gw10.md
 
+> **CLOSED 20 Nov 2026 at the GW10 sunset.** Record only. The live plan is
+> `docs/plan_rolling.md`. A post-sunset amendment drafted in the GW11 review was never
+> committed (process error n=29).
+
 Forward plan for manager 50930, written 21 Aug 2026 before the GW1 deadline — so later
 decisions are checked against a pre-committed position, not reconstructed after.
 

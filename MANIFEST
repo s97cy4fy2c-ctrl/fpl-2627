@@ -12,6 +12,9 @@ docs/doctrine.md
 docs/ledger.md
 docs/operating.md
 docs/plan_gw1_gw10.md
+docs/plan_rolling.md
+docs/review_gw10.md
+docs/superpowers/specs/2026-10-17-gw7-wildcard-pipeline-design.md
 skills/gameweek-review/SKILL.md
 skills/gameweek-review/scripts/check_squad.py
 skills/gameweek-review/scripts/collisions.py

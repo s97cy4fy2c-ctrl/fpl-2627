@@ -18,17 +18,22 @@ given who else owns him."
   to miss — his range might be 1 to 8 points. A 45%-owned ceiling asset is not. This
   is the whole reason the Haaland case transfers to no one else.
 - **Differentials must be paid for** — low ownership *plus* a route to a haul:
-  penalties, xGI >= 0.34, or proven DefCon delivery. Merely unpopular is a leak.
+  penalties, xGI >= 0.34 per 90 measured by N1 (s2), or proven DefCon delivery.
+  Merely unpopular is a leak.
+- **Armband lock.** The armband stays at the last recorded call. A change needs a
+  named cause (availability or confirmed news) and a one-line reason written before
+  the deadline. Ruled 20 Nov 2026.
 
 ## 2. Reading the numbers without being fooled
 
 - **Regression direction.** Overperformance against xG regresses down.
   Underperformance *with sustained volume* is the buy signal. The market does the
   opposite — buys the hauler, sells the blanker. That gap is where rank is made.
-- **Form is a trigger to look, never a reason to act.** A purple patch or a cold
-  streak earns an investigation, not a move. Name the cause under it: role change,
-  set-piece change, or a sustained volume shift over ~6+ starts. A cause → act. None
-  → it is variance, and you hold *having checked*. This is how the squad stays agile
+- **Form is a trigger to look, never a reason to act.** There are three causes:
+  this player's role, his set pieces, or a volume shift that passes N1. Team xG is
+  not a cause. A manager change is not a cause. A window of fewer than six starts is
+  a look. A cause → act. None → it is variance, and you hold *having checked*.
+  Amended 20 Nov 2026. This is how the squad stays agile
   without chasing form, and how a broken hold gets dropped without dogma.
 - **Sample size.** Don't act on underlying data before ~6 starts unless role has
   visibly changed. Before then only role and set-piece are actionable causes — volume
@@ -39,8 +44,21 @@ given who else owns him."
 - **Set-piece changes outrank statistical trends.** A new penalty taker is a
   step-change in ceiling no per-90 surfaces for weeks.
 - **Ownership is never evidence of quality.** Input to variance, nothing else.
-- **No projection model.** Reasoning transparently from underlying data beats
-  laundering guesses into authoritative-looking numbers.
+- **No projection decides.** A model may screen candidates, as the solver does (s3).
+  Its numbers never enter a scorecard, a decision-log line or a captaincy call. A
+  pipeline that runs one says so in its spec. Amended 20 Nov 2026.
+
+**N1. Volume trend - RULED 20 Nov 2026.**
+
+- List per-match xGI, or DefCon delivered, for every start, in order.
+- Minutes first. If minutes per start are falling, it is a role question, not volume.
+- The window is fixed: the last six starts against all earlier starts. Never pick a
+  split after seeing the numbers.
+- Fewer than six recent starts, or fewer than four earlier ones: no trend. A look.
+- Drop the single largest match and recompute. If the change shrinks by more than
+  half, there is no trend.
+- Print both rates. A trend that passes is a cause. One that fails is variance.
+- Why: the GW11 draft sold Mbeumo on a split driven by one GW2 match (n=31).
 
 ## 3. The solver is a candidate generator
 
@@ -52,7 +70,8 @@ test one at a time, not to adopt wholesale.
 ## 4. Chips are not played on vibes - but an unplayed chip scores zero
 
 Triggers are written in advance and held to. First set expires at the **GW19
-deadline, Sat 2 Jan 2027, 13:30 GMT**. Second set unlocks GW20.
+deadline**. Read it live from `events[].deadline_time`. This line carried a wrong
+date until 20 Nov 2026 (n=28). Second set unlocks GW20.
 
 **The expiry changes the arithmetic.** Verified 7 Sep 2026 `[live]`: every gameweek
 from GW4 to GW19 is a full ten-fixture round, all twenty clubs, and the season
@@ -72,10 +91,10 @@ next review says so rather than quietly moving on.
 - **Wildcard** - target GW6-GW9, once six rounds of real data exist. Earlier only if
   4+ starters are unavailable/sold/demoted AND fixing it costs 3+ hits across two
   gameweeks. Never to chase a bandwagon.
-- **Bench Boost** - all four bench players confirmed starting. Realistically the week
-  after a Wildcard, which is what makes the bench playable. If still unreachable by
-  ~GW15, either the Wildcard failed to build a playable bench or the chip is being
-  written off - say which, don't drift into expiry.
+- **Bench Boost** - target the best bench-fixture week in `plan_rolling.md`. Fire if
+  all four bench players have status a and started both previous league games. If
+  that week fails, use the next qualifying week from GW16. "Confirmed starting" is
+  unknowable before a Saturday deadline. Amended 20 Nov 2026.
 - **Triple Captain** - a premium on a home fixture rated 2, and only if he started and
   completed the previous two. Never in a gameweek of maximum uncertainty.
 - **Free Hit** - **fixture-targeting is the primary use.** Upside, not damage
@@ -84,7 +103,8 @@ next review says so rather than quietly moving on.
   compromised that week - collisions (s9), European load, a fixture cluster - AND a
   one-week alternative carries real ceiling. A blank is still a valid trigger; it is
   no longer the only one. Do not hold past ~GW15 waiting for a blank the fixture list
-  says is not coming.
+  says is not coming. Plan it in a different gameweek from the Bench Boost. Backstop:
+  the last gameweek inside the window, read live.
 
 ## 5. Hits
 
@@ -110,6 +130,11 @@ thing; individual results are not.
 Track alongside actual score the **frozen GW1 XI** and the **template XI**. If frozen
 beats actual at GW10, the fix is fewer transfers, not better ones. Say so plainly.
 
+GW10 result: actual 692 v frozen 559-577 v template 615 [live, 20 Nov]. The finding
+did not fire. **Template XI** (ruled 20 Nov 2026): each GW, the 11 most-owned players
+at that round, legal formation, max 3 per club, most-captained as captain. No budget,
+no subs. Scored from GW11.
+
 ## 7. Behaviour
 
 - Lead with the call. Reasoning follows it, never replaces it.
@@ -127,6 +152,12 @@ beats actual at GW10, the fix is fewer transfers, not better ones. Say so plainl
 - **Never record a provisional position as a decision.** A recommendation is not a
   ruling; dating it doesn't help. Ask for the ruling, or file it open. See process
   error 11.
+- **No transfer, chip or armband change without a ledger line written before the
+  deadline.** A move with no line is a process error (n=30).
+- **A ruling that cites a [community] point is a process error,** whatever the outcome.
+- **Dates are data.** Read deadlines and chip expiries live from
+  `events[].deadline_time`, in UTC. No doc types a deadline; it names the field.
+  Session start prints the next deadline and the hours left (n=27, n=28).
 
 **Known drift:** long conversations pull toward agreeableness. The phrases "you're
 hedging", "that's punditry", "you're agreeing too easily" mean re-read this file and
@@ -134,7 +165,15 @@ redo the answer without defending the original.
 
 ---
 
-## 8. Transferability — RULED 21 Aug 2026
+## 8. Transferability — RETIRED 20 Nov 2026
+
+**Retired at the GW10 review.** The thesis was not supported. Prior-to-current
+Spearman of pts/90: 0.33 at new-manager clubs v 0.44 elsewhere; 90% CI of the gap
+[-0.39, +0.18]. Top quartile: 0.75 v 0.63 [live, 20 Nov]. All four covered buys were
+overridden. A manager change is not a cause to buy, sell or bench. Only this player's
+visible role change is (s2). The text below is the record.
+
+### Record - RULED 21 Aug 2026
 
 **Demoted from hard exclusion to a confidence discount.** Manager's call at the GW1
 deadline. Supersedes the provisional block.
@@ -176,7 +215,7 @@ each player's points depend on**, not on his position label.
 
 | Class | Shape | Why it matters |
 |---|---|---|
-| **A** | Two clean-sheet assets on opposite sides | Mutually exclusive. Only one clean sheet can exist, so one of them is dead before kickoff |
+| **A** | Two clean-sheet assets on opposite sides | A hedge, not a dead slot - a 0-0 pays both. Lower variance, lower ceiling. Graded with class B (amended 20 Nov 2026) |
 | **B** | Our attacker against our own clean-sheet asset | An internal hedge - the attacker returning is exactly what kills the clean sheet. Caps ceiling, and ceiling is where rank is made |
 | **C** | Attacker against attacker | Benign, and *better* in a free-scoring fixture: both can return. Two strikers opposed is not a problem |
 
@@ -187,7 +226,8 @@ scores above the league median per game AND the defending club concedes above it
 rates are printed alongside; nothing is projected.
 
 Mechanical part: `skills/gameweek-review/scripts/collisions.py`, which exits non-zero
-on 2+ class-A pairs in the XI. Judgment part: collisions are a **scorecard axis**,
+on 2+ class-A pairs in the XI. Ruled 20 Nov 2026: it should warn, not fail. Code
+change pending. Judgment part: collisions are a **scorecard axis**,
 ranked with the others - they inform the pick, they do not decide it. And they are
 scored across the next ~4 gameweeks on any transfer, not just the upcoming one: a
 signing that looks clean on Saturday and collides three times by GW9 is a shape
@@ -195,3 +235,14 @@ mistake, not a slot mistake.
 
 Known limitation: a never-playing reserve (0 minutes) still counts as a clean-sheet
 asset, so bench noise is over-reported. Recorded, not silently filtered.
+
+---
+
+## 10. Same-club GK+DEF - RULED 20 Nov 2026
+
+A same-club GK+DEF pair is one bet, not two. It is a scorecard axis, not a cap. Start
+the pair when each beats his alternative on fixture-adjusted xGC. Log the reason.
+`check_squad.py` warns.
+
+Why: the bar lost all three times it fired (De Cuyper 36 v Shaw 11; Kadıoğlu 6 v 0,
+then 9 v 3), and the three Kadıoğlu overrides gained 15 [live, GW10 review].

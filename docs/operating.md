@@ -76,6 +76,15 @@ calculation windows, not price changes).
 
 ---
 
+## Dates — ruled 20 Nov 2026
+
+Deadlines and chip expiries are read live from `events[].deadline_time`, in UTC,
+every session. No doc types a deadline. Session start prints the next deadline and
+the hours left. After n=27 (GW10 deadline missed) and n=28 (GW19 date wrong in five
+places).
+
+---
+
 ## Mechanical vs judgment
 
 The governing failure of the first design: rules lived in prose, and prose doesn't
@@ -83,10 +92,10 @@ execute. Most process errors violated a rule already written down.
 
 | In **code** — passes or fails loudly | In **`doctrine.md`** — needs judgment |
 |---|---|
-| minutes and starts thresholds | transferability + its GW10 falsification |
+| minutes and starts thresholds | GK+DEF pairs and collision grades (scorecard axes) |
 | promoted-club exclusion before GW7 | chip triggers |
-| club correlation caps (GK+DEF, 2×DEF) | what makes a differential *paid for* |
-| transferability: club + manager + defensive unit | effective-ownership reasoning |
+| N1 volume trend (script pending) | what makes a differential *paid for* |
+| deadlines read live from `events[]` | effective-ownership reasoning |
 | DefCon as points DELIVERED, never a rate | when to override the solver |
 | European load | form-as-trigger vs cause-to-act |
 | staleness and set-piece diffing | tone, pushback, naming the pick |
@@ -102,9 +111,10 @@ If a rule can be checked, something that fails must check it.
 - `docs/operating.md` — this file.
 - `docs/doctrine.md` — judgment only. Short and arguable.
 - `docs/ledger.md` — squad, decisions, process errors. Append-only.
-- `docs/plan_gw1_gw10.md` — pre-committed triggers, named exits, watchlist. Through
-  GW10 it is the forward plan the weekly loop consults and amends; at the GW10 sunset
-  it is re-derived and becomes the rolling ~3-4 GW plan.
+- `docs/plan_rolling.md` — the rolling ~3-4 GW plan. The weekly loop consults it
+  (step 6) and amends it (step 10).
+- `docs/plan_gw1_gw10.md` — CLOSED 20 Nov 2026 at its GW10 sunset. Record only.
+- `docs/review_gw10.md` — the GW10 review and its rulings.
 - `skills/` — the mechanical rules, as code, plus the gameweek-review and squad-build
   loops. Load on trigger. **Read the skill body from the repo — the mounted `/mnt/skills` copy is an unsynced snapshot and lagged the 10-step redesign by a full loop version (process error n=14); the repo is authoritative.**
 - `archive/2026-08-pre-redesign/` — the four original docs, verbatim. Not live.

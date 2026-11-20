@@ -573,3 +573,31 @@ Logged rationale is the underlying team data. Manager's stated reason was form. 
 Deltas: caught-by self +2, manager +1.
 
 **Still open.** The project prompt still names the archived behaviour/method/data/analysis.md as operating instructions (open since GW5). The set-piece baseline still has no set-piece columns.
+
+## 20 Nov 2026 - GW9-GW10 record and the GW10 review
+
+**GW9 - backfilled 20 Nov (n=30).** Transfer João Pedro -> N.Jackson, 1 FT, no hit [live, `transfers/`]. No ruling was written at the time. João Pedro had 0 mins in GW8 [live]. The Bench Boost trigger failed by its own rule (Calafiori did not start GW8) [live]; not played. 77 pts; rank 463,673 -> 186,729 [live].
+
+**GW10 - deadline missed (n=27).** The calendar date was wrong. The team auto-carried. 70 pts; rank 147,450 [live]. The FT rolled: 2 FTs for GW11 (derived; manager to confirm in app). Cost of the miss: low.
+
+**GW10 review - RULED 20 Nov 2026, 12:48 GMT.** Full record: `docs/review_gw10.md`. Two blind auditors and a blind doctrine challenger. The manager accepted all 18 recommendations.
+- Transfers earned: actual 692 v frozen 559-577 v template 615 [live]. "Fewer transfers" did not fire.
+- Transferability retired (s8). Cause gate amended and N1 added (s2). GK+DEF bar is now a scorecard axis (s10). Class A is a hedge (s9). Projections may screen, never decide (s2). Bench Boost and Free Hit rewritten (s4). Dates read live (s7, operating). Recording rule, community-provenance rule and armband lock adopted (s1, s7). Template XI defined (s6).
+- Kept: D2, D4, D5, D6, D8, the FT-banking bar. Kept and re-tested at GW19: D12, D14, D15.
+- `plan_gw1_gw10.md` closed. `plan_rolling.md` opened.
+- Project prompt: the manager replaces the archived-file instruction himself (text supplied in chat, 20 Nov).
+
+**Pending, not done:** `collisions.py` class A -> warn. An N1 script. A weekly `*_order` snapshot for the set-piece baseline. `build.py` thresholds (n=22). Pipeline code commit. Rejections tab: 19 of 25 due rows ungraded. Watchlist stale since 7 Sep. process_errors n=18 and n=19 unlogged. Five promised GW5 rejection rows never written.
+
+### Process errors - updated 20 Nov 2026
+
+- **n=27, manager.** GW10 deadline missed on a wrong calendar date.
+- **n=28, self.** GW19 expiry wrong in five places (doctrine s4, plan x3, ledger).
+- **n=29, manager.** The GW11 review amended `plan_gw1_gw10.md` after its sunset and cited the expired s8 rule as a sell reason. Not committed.
+- **n=30, review agent.** No ledger ruling for GW9 or GW10. The GW9 transfer was unrecorded.
+- **n=31, review agent.** The GW11 draft sold Mbeumo on a window split driven by one GW2 match. Verified [live]: GW3-10 is flat at 0.41/90.
+- **n=32, self.** The GW11 datapack fed "0.77 at GW6" to the blind builder, which then mis-stated GW7-10 as 0.26 (true 0.44). Blindness breached (n=23 family).
+
+Correction: the running self-caught share has been off by one since n=15. "4/15" is 4/14 and "5/17" is 5/16. With n=27-32: self 11/29. The costly errors are still caught by the manager or by review agents, not by the weekly loop.
+
+**GW11 - OPEN.** Review pick Hold (55/45). Alternative Mbeumo -> McGinn, fixture-chasing. Ruling before the deadline, with a ledger line (R10).

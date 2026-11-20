@@ -20,7 +20,8 @@ curl -sfL https://raw.githubusercontent.com/s97cy4fy2c-ctrl/fpl-2627/main/bootst
 ```
 
 Read `config.json` and `docs/operating.md`. Don't re-derive what they hold —
-European qualification especially.
+European qualification especially. Print the next deadline live from
+`events[].deadline_time`, with the hours left.
 
 Run `scripts/check_squad.py` for the mechanical steps. It exits non-zero on any
 hard-rule breach.
@@ -68,7 +69,7 @@ each flagged name, name the cause.
 |---|---|
 | Role — minutes, position or starting status changed | Now |
 | Set-piece — gained or lost penalties / corners | Now |
-| Volume — sustained xGI or DefCon-delivered shift over >=6 starts | From GW6 only |
+| Volume — a shift that passes N1 (doctrine s2) | Yes |
 | Variance — finishing noise, none of the above | No. Hold / ignore |
 
 Act on the first three. Variance is how you hold a cold player without dogma: you
@@ -91,8 +92,9 @@ local problem.
 
 ## Forward plan — consult, then update
 
-One rolling intent, ~3-4 GW deep, matching the transfer bar. Through GW10 it lives
-in `docs/plan_gw1_gw10.md`. Consult that file; never fork it.
+One rolling intent, ~3-4 GW deep, matching the transfer bar. It lives in
+`docs/plan_rolling.md` (`plan_gw1_gw10.md` closed 20 Nov 2026). Consult that file;
+never fork it.
 
 - **Consult (step 6).** State the standing intent and whether this week's scans just
   invalidated it. It is an input, never a cage. A locked-in intent does not raise the
@@ -104,8 +106,7 @@ in `docs/plan_gw1_gw10.md`. Consult that file; never fork it.
   projection model. Fixtures past ~GW4 are fiction; re-pull from `/api/fixtures/` as
   rounds resolve.
 
-At the GW10 sunset `plan_gw1_gw10.md` is re-derived from real data and becomes the
-standalone rolling plan this step maintains.
+Done 20 Nov 2026: `plan_rolling.md` is the plan this step maintains.
 
 ## Whole-squad scorecard
 
@@ -119,8 +120,7 @@ units · midweek European load · bench outfield starts · ownership sum · cost
 - **DefCon on points DELIVERED, never a rate.** The ratio is a shortlist filter only.
 - **Minutes and role before everything.** 0.6 xGI/90 at 60% of starts loses to 0.4
   at 100%.
-- **Transferability** (decays GW7, dropped GW10): same club, same manager, and for
-  clean-sheet assets the same defensive unit. All 15, not the 11.
+- **Transferability: retired 20 Nov 2026** (doctrine s8). A manager change is not a cause.
 - **No promoted-club starter before GW7** (COV, HUL, IPS).
 - **Correlated risk** counted by club, point source and injury.
 - **European load** before trusting any fixture rating. Source from `config.json`.
