@@ -20,15 +20,26 @@ curl -sfL https://raw.githubusercontent.com/s97cy4fy2c-ctrl/fpl-2627/main/bootst
 ```
 
 Read `config.json` and `docs/operating.md`. Don't re-derive what they hold —
-European qualification especially. Print the next deadline live from
-`events[].deadline_time`, with the hours left.
+European qualification especially. Then, in the Composio sandbox, run
+`python3 scripts/deadline.py` - the next deadline and the chip expiry, live, with
+hours left (doctrine s7). Never take a deadline from a doc or a calendar.
 
 Run `scripts/check_squad.py` for the mechanical steps. It exits non-zero on any
 hard-rule breach.
 
 Run `scripts/collisions.py squad.json --to <gw+4>` as well. Own-club head-to-head
-exposure, graded A/B/C (doctrine s9). Exits non-zero on 2+ class-A pairs in the XI.
-Class A and any class-B in the XI are a scorecard axis, ranked with the rest.
+exposure, graded A/B/C (doctrine s9). It warns and never fails (R7, 20 Nov 2026):
+class A is a hedge. Class A and any class-B in the XI are a scorecard axis, ranked
+with the rest.
+
+Run `scripts/n1.py <names>` for every cold or hot name in steps 2 and 5. It prints
+both rates and the verdict: CAUSE, VARIANCE, ROLE or LOOK (doctrine s2, N1). Use
+`--metric defcon` for defenders. Never pick a window by hand.
+
+Run `scripts/setpieces.py --out setpieces_<yyyymmdd>.csv --baseline <latest
+data/setpieces_*.csv raw URL>` for step 3. Commit the new snapshot to `data/`.
+
+Tests: `python3 -m pytest skills` (no network).
 
 ## The loop
 

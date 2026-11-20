@@ -225,9 +225,8 @@ Class B is graded on live scoring rates, not reputation: `B!` when the attacking
 scores above the league median per game AND the defending club concedes above it. The
 rates are printed alongside; nothing is projected.
 
-Mechanical part: `skills/gameweek-review/scripts/collisions.py`, which exits non-zero
-on 2+ class-A pairs in the XI. Ruled 20 Nov 2026: it should warn, not fail. Code
-change pending. Judgment part: collisions are a **scorecard axis**,
+Mechanical part: `skills/gameweek-review/scripts/collisions.py`. It warns on class A
+and B and never fails (ruled and coded 20 Nov 2026, with tests). Judgment part: collisions are a **scorecard axis**,
 ranked with the others - they inform the pick, they do not decide it. And they are
 scored across the next ~4 gameweeks on any transfer, not just the upcoming one: a
 signing that looks clean on Saturday and collides three times by GW9 is a shape

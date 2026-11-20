@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Own-club head-to-head exposure. Exits non-zero on 2+ class-A pairs in the XI.
+"""Own-club head-to-head exposure. Warns on class A and B; never fails (ruled 20 Nov 2026).
 
 Ruled 7 Sep 2026. Companion to check_squad.py, kept separate because it needs
 the fixtures endpoint and answers a different question: not "is this squad
@@ -9,8 +9,9 @@ We hold 9 of 20 clubs across 15 players, so collisions occur in EVERY gameweek
 from GW4 to GW10. A rule that banned them would fire constantly and be ignored,
 which is how the transferability thesis died. So grade, never ban.
 
-  Class A  two clean-sheet assets on opposite sides. Mutually exclusive - only
-           one clean sheet can exist. Strict expected-points loss.
+  Class A  two clean-sheet assets on opposite sides. A hedge, not a dead slot:
+           a 0-0 pays both. Lower variance, lower ceiling. Amended 20 Nov 2026
+           (was "mutually exclusive", which a 0-0 disproves).
   Class B  our attacker against our own clean-sheet asset. An internal hedge:
            the attacker returning is exactly what kills the clean sheet.
            Marked B! when the attacking club scores above the league median AND
@@ -98,10 +99,26 @@ def line(c):
     where = "XI" if c["xi"] else "bench"
     if c["cls"] == "A":
         return (f"  A  GW{c['gw']} ({where}) {c['fx']}: {c['a']}({c['ac']}) and "
-                f"{c['b']}({c['bc']}) both need the same clean sheet - only one can pay")
+                f"{c['b']}({c['bc']}) on opposite sides - a hedge (a 0-0 pays both)")
     return (f"  {c['cls']:<2} GW{c['gw']} ({where}) {c['fx']}: {c['a']}({c['ac']}) returning "
             f"kills {c['b']}({c['bc']})'s clean sheet "
             f"[{c['ac']} {c['gf']:.1f} GF/g v {c['bc']} {c['ga']:.1f} GA/g]")
+
+
+def verdict(allc, gw):
+    """Summary lines and exit code for the upcoming GW.
+
+    Ruled 20 Nov 2026 (R7, doctrine s9): class A is a hedge, not a dead slot - a
+    0-0 pays both sides. It is graded with class B as a scorecard axis. This
+    script warns on it and never fails. Exit code is always 0.
+    """
+    xa = [c for c in allc if c["xi"] and c["cls"] == "A" and c["gw"] == gw]
+    n = len([c for c in allc if c["gw"] == gw and c["xi"]])
+    msgs = [f"upcoming GW{gw}: {n} in the XI, {len(xa)} of them class A"]
+    if len(xa) > 1:
+        msgs.append(f"WARN: {len(xa)} class A pairs in the XI - lower variance, lower "
+                    "ceiling. A scorecard axis, not a fail")
+    return msgs, 0
 
 
 def main(path, to=None):
@@ -125,16 +142,14 @@ def main(path, to=None):
     if not allc:
         print(f"No class-A or class-B collisions, GW{gw}" + (f"-GW{to}" if to else ""))
         return
-    print("OWN-CLUB COLLISIONS (A = mutually exclusive, B = internal hedge, ! = live rates say it bites)")
+    print("OWN-CLUB COLLISIONS (A = opposed clean-sheet hedge, B = internal hedge, ! = live rates say it bites)")
     for c in allc:
         print(line(c))
-    xa = [c for c in allc if c["xi"] and c["cls"] == "A" and c["gw"] == gw]
+    msgs, code = verdict(allc, gw)
     print()
-    print(f"upcoming GW{gw}: {len([c for c in allc if c['gw']==gw and c['xi']])} in the XI, "
-          f"{len(xa)} of them class A")
-    if len(xa) > 1:
-        print("FAIL: 2+ class-A pairs in the XI - the squad is betting against itself")
-        sys.exit(1)
+    for m in msgs:
+        print(m)
+    sys.exit(code)
 
 
 if __name__ == "__main__":

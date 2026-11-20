@@ -9,7 +9,8 @@ gets logged.
 
 Usage:
   python3 build.py --gw 1
-  python3 build.py --gw 8 --thesis off --exclude Watkins --max-club 2
+  python3 build.py --gw 12 --exclude Watkins --max-club 2
+  Needs pulp<3. Thresholds scale to games played (n=22). Transferability off.
 """
 import argparse, collections, csv, io, json, sys, unicodedata, urllib.request
 from collections import Counter
@@ -32,6 +33,28 @@ PROMOTED = {"COV", "HUL", "IPS"}
 # (Andrews managed Brentford throughout 2025/26) and omitted IPS. Same defect
 # family as the old EUROPE literal. Do not reintroduce a hand-typed set here.
 NEW_MGR = set()  # populated in load() from config.json
+
+
+def thresholds(gp):
+    """Minutes-certainty thresholds scaled to games played (n=22, ruled 20 Nov 2026).
+
+    The rule was 1800 mins and 24 starts, which only fits a full 38-GW season of
+    data. Mid-season it marked every player 'not nailed' and the solver went
+    infeasible. Same proportions, scaled: 1800/38 mins and 24/38 starts per game.
+    gp=0 means the data are a completed prior season, so the full figures apply.
+    """
+    import math
+    g = gp or 38
+    return {"mins": math.ceil(1800 * g / 38), "starts": math.ceil(24 * g / 38),
+            "low_starts": math.ceil(20 * g / 38)}
+
+
+def games_played():
+    """Finished gameweeks, live. 0 when the API is unreachable (mirror = prior season)."""
+    try:
+        return sum(1 for e in get(API)["events"] if e.get("finished"))
+    except Exception:
+        return 0
 
 
 MIRROR = ("https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/"
@@ -126,6 +149,8 @@ def defcon_delivered(season="2025-26"):
 
 def load():
     cfg = get(CFG)
+    th = thresholds(games_played())
+    print(f"minutes rule: {th['mins']}+ mins and {th['starts']}+ starts (scaled, n=22)")
     eur = cfg["europe_2627"]
     NEW_MGR.update(cfg["new_managers_2627"]["clubs"])
     if not DC_DELIVERED:
@@ -149,7 +174,8 @@ def load():
             pen1=1 if e.get("penalties_order") == 1 else 0,
             dc=dc, europe=club in in_eu,
             transferable=(not new_club and club not in NEW_MGR and club not in PROMOTED),
-            nailed=(mins >= 1800 and starts >= 24),
+            nailed=(mins >= th["mins"] and starts >= th["starts"]),
+            low=starts < th["low_starts"],
         ))
     return rows
 
@@ -158,7 +184,10 @@ def solve(rows, gw, thesis, exempt, max_club, budget):
     try:
         import pulp
     except ImportError:
-        sys.exit("pulp missing:  pip install pulp --break-system-packages")
+        sys.exit("pulp missing:  pip install 'pulp<3' --break-system-packages")
+    if int(pulp.__version__.split(".")[0]) >= 3:
+        sys.exit(f"pulp {pulp.__version__} found; this script needs pulp<3 "
+                 "(4.x removed LpVariable.dicts and PULP_CBC_CMD)")
 
     idx = range(len(rows))
     prob = pulp.LpProblem("squad", pulp.LpMaximize)
@@ -179,9 +208,8 @@ def solve(rows, gw, thesis, exempt, max_club, budget):
 
     for club in {r["club"] for r in rows}:
         prob += pulp.lpSum(s[i] for i in idx if rows[i]["club"] == club) <= max_club
-        # Correlated clean-sheet risk: two defensive units from one club are ONE bet.
-        prob += pulp.lpSum(x[i] for i in idx if rows[i]["club"] == club
-                           and rows[i]["pos"] in ("GKP", "DEF")) <= 1
+        # Same-club GK+DEF is no longer a cap (R5, 20 Nov 2026): it lost 0-3 when it
+        # fired. It is a scorecard axis - see scorecard() "correlated".
 
     # Minutes and role before everything else.
     prob += pulp.lpSum(x[i] for i in idx if not rows[i]["nailed"]) == 0
@@ -191,10 +219,10 @@ def solve(rows, gw, thesis, exempt, max_club, budget):
         prob += pulp.lpSum(x[i] for i in idx if rows[i]["club"] in PROMOTED) == 0
 
     # A bench that cannot auto-sub makes Bench Boost unreachable.
-    prob += pulp.lpSum(s[i] for i in idx if rows[i]["starts"] < 20) <= 2
+    prob += pulp.lpSum(s[i] for i in idx if rows[i].get("low", rows[i]["starts"] < 20)) <= 2
 
-    # Transferability: same club, same manager. Decays from GW7, dropped at GW10.
-    # Applies to all 15 outfield, not the 11 - bench players auto-sub into the XI.
+    # Transferability: RETIRED 20 Nov 2026 (R4, doctrine s8). Kept only to test what
+    # it would have cost; off by default.
     if thesis and gw < 10:
         for i in idx:
             if not rows[i]["transferable"] and rows[i]["name"] not in exempt:
@@ -243,15 +271,20 @@ def scorecard(rows, squad, xi_idx):
     print("penalties or bench value. Check against doctrine before proposing it.")
 
 
-def main():
+def parser():
     ap = argparse.ArgumentParser()
     ap.add_argument("--gw", type=int, default=1)
-    ap.add_argument("--thesis", default="transferable", help="'transferable' or 'off'")
+    ap.add_argument("--thesis", default="off",
+                    help="'off' (default; retired 20 Nov 2026) or 'transferable' to test it")
     ap.add_argument("--exempt", default="", help="comma-sep names exempt from transferability")
     ap.add_argument("--exclude", default="", help="comma-sep names removed entirely (rumour sweep)")
     ap.add_argument("--max-club", type=int, default=3)
     ap.add_argument("--budget", type=int, default=1000)
-    args = ap.parse_args()
+    return ap
+
+
+def main():
+    args = parser().parse_args()
 
     rows = load()
     drop = {n.strip() for n in args.exclude.split(",") if n.strip()}

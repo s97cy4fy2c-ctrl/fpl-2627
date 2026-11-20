@@ -19,7 +19,7 @@ python3 scripts/build.py --gw 8 --exclude Watkins,Konsa --max-club 2
 python3 scripts/build.py --gw 12 --thesis off
 ```
 
-Requires `pulp` (`pip install pulp --break-system-packages`).
+Requires `pulp<3` (`pip install 'pulp<3' --break-system-packages`). pulp 4 removed the API the solver uses.
 
 First line prints `[live]` or `[mirror]`. **State which.** The API is reachable from
 the Composio sandbox, 403 from the container where the mirror is the fallback — and
@@ -27,17 +27,18 @@ mirror ownership and club assignment are low-trust.
 
 | Flag | Use |
 |---|---|
-| `--gw N` | Drives the expiring rules: promoted-club at GW7, transferability at GW10 |
+| `--gw N` | Drives the promoted-club rule (expired GW7) |
 | `--exclude` | Players removed entirely. Run the rumour sweep first while the window is open |
-| `--exempt` | Forces a player in, waives transferability for him. Justify every use |
+| `--exempt` | Forces a player into the XI. Justify every use |
 | `--max-club` | Below 3 buys wildcard flexibility |
-| `--thesis off` | Disables transferability. Use from GW10, or to test what it costs |
+| `--thesis transferable` | Re-enables the retired transferability rule, only to test what it would cost. Default `off` (R4, 20 Nov 2026) |
 
 ## What it enforces — so you don't have to remember
 
-Budget, 2/5/5/3, valid formation, max per club, minutes certainty (1800+ minutes and
-24+ starts), promoted-club exclusion before GW7, no two starting GK/DEF from one club,
-at most two squad players below 20 starts, transferability across all 15.
+Budget, 2/5/5/3, valid formation, max per club, minutes certainty (1800 minutes and
+24 starts per 38 games, scaled to games played - n=22), promoted-club exclusion before
+GW7, at most two squad players below the scaled low-starts line (20 per 38). Same-club
+GK+DEF is no longer a cap: the scorecard prints it as an axis (R5).
 
 **INFEASIBLE** → relax exactly one constraint and say which. Never quietly drop a rule
 to make it solve.

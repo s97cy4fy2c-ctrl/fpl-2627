@@ -601,3 +601,15 @@ Deltas: caught-by self +2, manager +1.
 Correction: the running self-caught share has been off by one since n=15. "4/15" is 4/14 and "5/17" is 5/16. With n=27-32: self 11/29. The costly errors are still caught by the manager or by review agents, not by the weekly loop.
 
 **GW11 - OPEN.** Review pick Hold (55/45). Alternative Mbeumo -> McGinn, fixture-chasing. Ruling before the deadline, with a ledger line (R10).
+
+### Code changes - 20 Nov 2026 (manager instruction, 13:02 GMT)
+
+Test-first: 19 tests, `python3 -m pytest skills`, no network. Each script was run live in the Composio sandbox before commit [live].
+- `collisions.py`: class A warns, never fails (R7).
+- `n1.py` (new): N1 volume trend (R2). Live: Mbeumo VARIANCE (-0.40; -0.03 without GW2). McGinn LOOK (9 starts). Van Hecke DefCon CAUSE (+0.50).
+- `setpieces.py` (new): weekly `*_order` snapshot and diff (D5). First baseline `data/setpieces_20261120.csv`, 150 players [live].
+- `deadline.py` (new): next deadline and chip expiry, read live (R1).
+- `build.py`: minutes thresholds scale to games played (n=22); it now solves at GW12, where it was infeasible. Same-club GK+DEF cap removed (R5). Transferability off by default (R4). Requires pulp<3: pulp 4 removed the API it uses.
+- **For ruling:** two N1 parameters were set in code, not by ruling. Falling minutes = more than 10 mins per start below earlier. Materiality floor = a change under 20% of the earlier rate is variance. The floor was added after the first live run read Barry's -0.06 on 0.86 as CAUSE.
+
+Still pending: `build.py`'s DefCon column reads the 2025/26 archive, not this season. Its scorecard still prints the retired "transferable starters" line. GW7 pipeline tools: **lost**. They lived in that session's container; the `run-gw7` branch holds only snapshot data [repo]. Rebuild from the spec when next needed. Rejections grading, watchlist and n=18/n=19 are unchanged.

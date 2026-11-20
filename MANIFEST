@@ -8,6 +8,7 @@ archive/2026-08-pre-redesign/method.md
 bootstrap.sh
 config.json
 data/baseline_snapshot_20260803.csv
+data/setpieces_20261120.csv
 docs/doctrine.md
 docs/ledger.md
 docs/operating.md
@@ -18,6 +19,14 @@ docs/superpowers/specs/2026-10-17-gw7-wildcard-pipeline-design.md
 skills/gameweek-review/SKILL.md
 skills/gameweek-review/scripts/check_squad.py
 skills/gameweek-review/scripts/collisions.py
+skills/gameweek-review/scripts/deadline.py
+skills/gameweek-review/scripts/n1.py
 skills/gameweek-review/scripts/resolve_names.py
+skills/gameweek-review/scripts/setpieces.py
+skills/gameweek-review/tests/test_collisions.py
+skills/gameweek-review/tests/test_deadline.py
+skills/gameweek-review/tests/test_n1.py
+skills/gameweek-review/tests/test_setpieces.py
 skills/squad-build/SKILL.md
 skills/squad-build/scripts/build.py
+skills/squad-build/tests/test_build.py
