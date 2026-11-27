@@ -613,3 +613,39 @@ Test-first: 19 tests, `python3 -m pytest skills`, no network. Each script was ru
 - **For ruling:** two N1 parameters were set in code, not by ruling. Falling minutes = more than 10 mins per start below earlier. Materiality floor = a change under 20% of the earlier rate is variance. The floor was added after the first live run read Barry's -0.06 on 0.86 as CAUSE.
 
 Still pending: `build.py`'s DefCon column reads the 2025/26 archive, not this season. Its scorecard still prints the retired "transferable starters" line. GW7 pipeline tools: **lost**. They lived in that session's container; the `run-gw7` branch holds only snapshot data [repo]. Rebuild from the spec when next needed. Rejections grading, watchlist and n=18/n=19 are unchanged.
+
+## 27 Nov 2026 - GW11 backfill and GW12 ruling
+
+**GW11 - backfilled 27 Nov (n=36).** Hold, 0 transfers, FT banked [live, `transfers/`]. XI 4-3-3: Trafford; De Cuyper, Van Hecke, Calafiori, Silva; Groß, Rogers, Rudoni; Haaland, N.Jackson, Barry. Bench: Leno, Mbeumo, Hall, Belloumi. Captain N.Jackson, vice Haaland - the manager's deliberate call, confirmed 27 Nov. No chip. No autosubs. 45 pts, bench 11. OR 147,450 -> 95,937 [live]. No ruling was written before the deadline.
+- Grading (s6). Silva over Mbeumo: correct call, good outcome. Silva 8, DefCon delivered; Mbeumo off at 21' after Yoro's 7' red [live]. Calafiori start: outcome neutral (1 pt; Hall 1 on the bench); process ungradeable, reasoning unrecorded. Armband: no recorded line, a process error whatever the outcome (Jackson C = Haaland C = 6).
+- Benchmarks GW11 (template XI's first scored week): actual 45, frozen GW1 XI 18, template XI 28. GW average 35 [live].
+- Rejected options, GW11 points, record only (4-GW window open): McGinn 1 v Mbeumo 1. B.Fernandes 2 v Mbeumo 1. Tavernier 8 v Mbeumo 1. Le Fée 3 / McGinn 1 v Belloumi 7. Evanilson 6 v N.Jackson 2 and v Barry 2. Isak 5 v N.Jackson 2. Calafiori 1 v Mbeumo 1 [live].
+
+**GW12 - RULED 27 Nov 2026, ~17:05 GMT. Deadline 18:30 UTC.** Rogers -> Tavernier, 1 FT, no hit. FTs 3 (manager-confirmed), 2 left. Bank 5.3 [manager screenshot, 17:05].
+- XI 3-4-3: Trafford; De Cuyper, Van Hecke, Silva; Groß, Tavernier, Rudoni, Mbeumo; Haaland, N.Jackson, Barry. Bench: Leno, Belloumi, Hall, Calafiori (proposed order; manager sets it in the app).
+- Captain N.Jackson, vice Haaland. Armband unchanged from GW11, so the s1 lock needs no reason line. Risk dial: chase (manager).
+- Sell cause: Rogers N1 xGI CAUSE, 0.61 -> 0.31; drop-largest -0.16. The fall came on easier fixtures (avg FDR 3.6 -> 3.0) [live]. CHE's GW14 is LIV (H), FDR 4, the Bench Boost week.
+- Buy case: Tavernier 0.64 xGI/90 season, 11/11 starts. BOU GW14 HUL (H) 2 [live]. Community lead [FFS], confirmed live.
+- Risks: Tavernier 4 yellows (5 by a club's 19th match = 1-match ban, FA 2026-27). BOU in the UEL. Pen order 3.
+- Route: first pick Rogers -> Gibbs-White. Manager challenged; withdrawn (n=39). Then Hold. Then Tavernier after a Bench Boost ideas sweep (n=40).
+- XI choice - **gut slot, the first logged `gut` call.** Mbeumo over Belloumi, ruled 17:16 GMT. Manager's reason: "Gut: Pochettino's first home game after Anfield; Mbeumo on penalties if Fernandes misses." Data was ~50/50: Mbeumo 0.58 xGI/90 v Belloumi 0.36, pen order 2 behind an ill Fernandes; but BRE have conceded 11, CRY 27 [live]. Calafiori benched: class B v Haaland, minutes risk. Grade at GW19 with the other gut calls.
+- Rejected GW12: Hold; Rogers -> Gibbs-White; Rogers -> Wirtz; Rogers -> McGinn; Barry -> Evanilson; N.Jackson -> Evanilson; Hall -> Branthwaite; Hall -> Muharemović now; Groß or Haaland captain. Rows in `rejections`.
+- Sequence: GW13 Hall -> Muharemović if Hall does not start GW12. GW14 Belloumi replaced only if he misses a start. Bench Boost GW14 holds.
+- Proposed in conversation, NOT ruled as doctrine: a weekly gut slot (logged `gut`), a weekly risk dial, and an ideas list from every community digest. For ruling.
+- Blind builder pick: Hall -> Branthwaite. Prosecutor: 8 charges, 5 serious; charge 1 (Gibbs-White) upheld.
+
+### Process errors - updated 27 Nov 2026
+
+- **n=33, self.** Unprefixed orchestrator variables clobbered by agents in the shared sandbox (GW11 session).
+- **n=34, prosecutor.** The GW11 first pick was scored on the GW10 line-up.
+- **n=35, manager.** "Jackson pen 3 v none" used to reject. Order 3 behind two takers is worth ~0.
+- **n=36, unrecorded.** No GW11 ruling or armband line before the deadline (n=30 family). Caught by self, 27 Nov.
+- **n=37, self.** Unprefixed sandbox alias `dt` clobbered by an agent mid-session. n=33 repeated. No data impact.
+- **n=38, self.** FT count asserted from memory ("FTs kept across a Wildcard") against the ledger's chain. The manager confirmed 3. The ledger was right.
+- **n=39, manager.** A sell cause treated as a buy case. Gibbs-White picked on one axis (order-1 pens) with no cause of his own. The blind builder and prosecutor had both flagged it.
+- **n=40, manager.** Community digests used only to check facts, never as a source of ideas.
+- **n=41, self.** Composio sandbox restart lost the datapack, scripts and set-piece snapshot mid-session. Rebuilt for commit. Working files need a checkpoint outside the sandbox.
+
+Code defects, open: `check_squad.py` budget uses now_cost v 100.0, not sell + bank. `n1.py` returns CAUSE on a zero base. `resolve_names.py` splits "B." so B.Fernandes fails. `collisions.py` rounds the median. **New:** `n1.py`'s minutes test has no single-match outlier rule; it read Mbeumo as ROLE from one red-card sub.
+
+Open doctrine challenges for ruling: a combining rule for scorecard axes; Bench Boost target as 15-man FDR; which N1 rate "paid-for xGI" means; N1 minimum change and earlier-window length; an outlier rule for N1's minutes test; whether the armband lock follows the ledger or the API record.

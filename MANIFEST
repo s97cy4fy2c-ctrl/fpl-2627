@@ -9,6 +9,7 @@ bootstrap.sh
 config.json
 data/baseline_snapshot_20260803.csv
 data/setpieces_20261120.csv
+data/setpieces_20261127.csv
 docs/doctrine.md
 docs/ledger.md
 docs/operating.md
